@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F6F6F6;
+}
+
+:root {
+  --purple-color: #433A8B;
+  --gray-color: #9A9A9A;
+}
+
+h1 {
+  font-size: 47px;
+  font-weight: 800;
+  color: var(--purple-color);
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+  height: 500px;
+}
+
+.logo-and-navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 710px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 34px;
+  color: var(--purple-color);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.item {
+  padding: 15px 30px;
+}
+
+.contact-us {
+  cursor: pointer;
+  background-color: white;
+  padding: 15px 40px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.main-info {
+  margin-top: 330px;
+}
+
+.title-info {
+  color: black;
+  font-size: 47px;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.subtitle-info {
+  color: #989898;
+  margin-bottom: 30px;
+}
+
+.input-and-button {
+  margin-top: 100px;
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.find_input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  width: 31.3vw;
+  color: var(--gray-color);
+  border: none;
+  padding: 20px 65px;
+  outline: 0;
+}
+
+.button-search {
+  font-size: 18px;
+  font-weight: 500;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--purple-color);
+  cursor: pointer;
+}
+
+.all-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  height: 400px;
+}
+
+.img-experience-1 {
+  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/56558719_409228822990474_3644209115700957157_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=110&_nc_ohc=NNhp8Y6ChS8AX-J9iGa&oh=053b1f2b9cbe39abc501de4ec9352724&oe=5EB7695F");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-experience-2 {
+  background-image: url("https://scontent-arn2-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80644304_637018030384337_6567613158327309370_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105&_nc_ohc=_Si_ny3g-t0AX8jS8M8&oh=e0274f0f6559c47cc1a5a23c25abf19a&oe=5EC3FAB3");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-experience-3 {
+  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/81897907_982353628817748_7775538246734106595_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=100&_nc_ohc=wo7X49C_avEAX-NpeqU&oh=2bbe7d223a994b52fffc4eb44ad0b06c&oe=5EC7E37C");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-experience-4 {
+  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/71922423_1180665852323298_4010668248192934104_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=106&_nc_ohc=UO7q2DV3wMUAX-86TuW&oh=3e4bf87600a408e3b6520df0b2481071&oe=5EB8D43A");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text-box {
+  width: 272px;
+}
+
+.title-box {
+  margin: 30px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.subtitle-box {
+  font-size: 14px;
+  color: var(--gray-color);
+  font-weight: 500;
+}
+
+.img-back {
+  background: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/31376393_847779708765504_1421297797432344576_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=100&_nc_ohc=Jb1Rt2a_fsEAX_2a6xa&oh=bca358e9dd3ff1cace52f0a6a4fc4787&oe=5EDB6213");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 42vw;
+  height: 1070px;
+  position: absolute;
+  top: -1.2em;
+  right: 0;
+  z-index: -2;
+}

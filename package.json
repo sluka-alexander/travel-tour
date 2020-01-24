@@ -1,0 +1,23 @@
+{
+  "name": "travel-tour",
+  "version": "1.0.0",
+  "description": "travel-tour",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/scss/main.scss src/css/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sluka-alexander/travel-tour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sluka-alexander/travel-tour/issues"
+  },
+  "homepage": "https://github.com/sluka-alexander/travel-tour#readme",
+  "dependencies": {
+    "sass": "^1.25.0"
+  }
+}
