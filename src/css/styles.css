@@ -10,14 +10,14 @@ html {
 
 :root {
   --purple-color: #433A8B;
-  --gray-color: #9A9A9A;
+  --gray-color: #999999;
 }
 
 h1 {
   font-size: 47px;
   font-weight: 800;
   color: var(--purple-color);
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 h2 {
@@ -26,9 +26,27 @@ h2 {
 }
 
 header {
-  margin-top: 30px;
+  margin-top: 60px;
   display: flex;
   justify-content: space-between;
+}
+
+.main-img {
+  position: absolute;
+  background-image: url("https://psv4.userapi.com/c856328/u143195712/docs/d14/fd53d21ea25e/main_page.jpg?extra=y5OeTSBs1e3MAE43Tu5Ree7BDxdJlU856sh_N57x8c1XqJYgjqoAdapFF7dUcyuZMGwRfpO-nWpImqeu3bo2q1ZjrhqQb0wF89ZNg1oiz2hOAO-Gx3erdFMOAwtayYz7nIPEecJD25dmM-fONQPTDoPp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1080px;
+  width: 44vw;
+  right: 0;
+  top: 0;
+  z-index: -6;
+}
+
+.content {
+  width: 36.5vw;
+  height: 1080px;
 }
 
 .container {
@@ -40,39 +58,41 @@ header {
 .logo-and-navbar {
   display: flex;
   justify-content: space-between;
-  width: 710px;
+  width: 670px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 34px;
+  font-size: 36px;
   color: var(--purple-color);
   text-transform: uppercase;
   font-weight: 900;
 }
 
 .navbar {
+  width: 370px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-weight: 600;
   font-size: 18px;
 }
 
-.item {
-  padding: 15px 30px;
-}
-
 .contact-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   background-color: white;
-  padding: 15px 40px;
+  height: 50px;
+  width: 200px;
   font-weight: 600;
   font-size: 18px;
 }
 
 .main-info {
-  margin-top: 330px;
+  margin-top: 360px;
 }
 
 .title-info {
@@ -84,30 +104,31 @@ header {
 
 .subtitle-info {
   color: #989898;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .input-and-button {
-  margin-top: 100px;
+  margin-top: 150px;
   display: flex;
   margin-bottom: 200px;
 }
 
 .find_input {
+  height: 70px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  width: 100%;
   font-weight: 500;
-  width: 31.3vw;
-  color: var(--gray-color);
   border: none;
-  padding: 20px 65px;
   outline: 0;
 }
 
 .button-search {
+  margin-top: 828px;
   font-size: 18px;
   font-weight: 500;
   width: 200px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,41 +138,36 @@ header {
 }
 
 .all-boxes {
+  margin-bottom: 140px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .box {
+  display: flex;
+  justify-content: flex-end;
   height: 400px;
+  width: 270px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .img-experience-1 {
   background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/56558719_409228822990474_3644209115700957157_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=110&_nc_ohc=NNhp8Y6ChS8AX-J9iGa&oh=053b1f2b9cbe39abc501de4ec9352724&oe=5EB7695F");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .img-experience-2 {
   background-image: url("https://scontent-arn2-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80644304_637018030384337_6567613158327309370_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105&_nc_ohc=_Si_ny3g-t0AX8jS8M8&oh=e0274f0f6559c47cc1a5a23c25abf19a&oe=5EC3FAB3");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .img-experience-3 {
   background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/81897907_982353628817748_7775538246734106595_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=100&_nc_ohc=wo7X49C_avEAX-NpeqU&oh=2bbe7d223a994b52fffc4eb44ad0b06c&oe=5EC7E37C");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .img-experience-4 {
   background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/71922423_1180665852323298_4010668248192934104_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=106&_nc_ohc=UO7q2DV3wMUAX-86TuW&oh=3e4bf87600a408e3b6520df0b2481071&oe=5EB8D43A");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .text-box {
@@ -170,17 +186,186 @@ header {
   font-weight: 500;
 }
 
-.img-back {
-  background: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/31376393_847779708765504_1421297797432344576_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=100&_nc_ohc=Jb1Rt2a_fsEAX_2a6xa&oh=bca358e9dd3ff1cace52f0a6a4fc4787&oe=5EDB6213");
+.circle {
+  z-index: -3;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 567px;
+  height: 453px;
+  background-image: url("https://psv4.userapi.com/c856328/u143195712/docs/d8/ad3b70e7067a/circle.png?extra=dniRHgI9X3dM-NChgcJjcvWbockIynDXl3CZQ-5wbLNOwSM0CNM7rE4oN9iQTSttSklELKjnNh428qj2YQ_cIeKys_KEyc42R68vO5T726O35wsuYDQfhLnlCfF6Zs5ucJzO-NkreM1OS2zQpDUciose");
+}
+
+.line-back {
+  z-index: -4;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 1075px;
+  height: 957px;
+  background-image: url("https://psv4.userapi.com/c856324/u143195712/docs/d4/48c45e98bbea/line-back.png?extra=HufcoxDJbCXCdVO61dQi-hHCs-E8PDLtBOMb4xsClnn8ONMoPP0G9-BfRwWBfDpKUQmz1Bsz5cKNXLFgqcNuZUIMAqzQG5r8mmYNIz66RD8ceuDPDM5xYreQHY3Sa5bq-gAxAhB2feUrKouP2lA7K-kW");
+}
+
+.info-and-arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.info-under-title {
+  max-width: 700px;
+  font-size: 14px;
+  color: var(--gray-color);
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+
+.info-clients {
+  font-size: 14px;
+  color: var(--gray-color);
+  font-weight: 500;
+  margin-bottom: 100px;
+  width: 100%;
+}
+
+.name-category {
+  font-size: 19px;
+  font-weight: 400;
+  height: 40px;
+  width: 150px;
+  opacity: 0.9;
+  background-color: var(--purple-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-category1 {
+  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/73177683_886357455273492_3040981951662070318_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=100&_nc_ohc=L7t8gpVG3kAAX8DVieD&oh=adef4016ee8852583316c356ca41610f&oe=5ECB87FC");
+}
+
+.img-category2 {
+  background-image: url("https://i.pinimg.com/originals/bc/f2/24/bcf2247e1d2484a755820f6cfbf2a3f6.jpg");
+}
+
+.img-category3 {
+  background-image: url("https://www.paledivision.com/wp-content/uploads/2018/05/willabelle-ong-willamazing-blogger-fashion-travel-lifestyle-blog-top-singapore-instagram-spots-iceland-reykjavik-icelandic-mountain-photography-locations-gullfoss-waterfall-winter.jpg");
+}
+
+.img-category4 {
+  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80452230_2983987128280893_1866896929975156859_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=109&_nc_ohc=XLwWxHcsSpgAX9pAEOm&oh=0178393dd8ecff8f141d10e66cdd7395&oe=5EC7406E");
+}
+
+.arrows {
+  display: flex;
+  width: 270px;
+}
+
+.arrows-distance {
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+}
+
+.arrow {
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border: 3px solid var(--gray-color);
+  color: #999999;
+  font-size: 19px;
+}
+
+.arrow:hover {
+  transition: 0.3s;
+  background-color: var(--purple-color);
+  border: 3px solid var(--purple-color);
+  color: white;
+}
+
+.video-cover {
+  margin-bottom: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  background-color: black;
+  background-image: url("http://www.travelstart.co.ke/blog/wp-content/uploads/2017/12/48.jpg");
+  background-size: cover;
+}
+
+.blackout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 1s;
+}
+
+.blackout:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 1s;
+}
+
+.circle-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.circle-play-two {
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: white;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+.circle-play-two:hover {
+  transition: 0.3s;
+  height: 100px;
+  width: 100px;
+}
+
+.allblock {
+  width: 100%;
+  display: flex;
+  height: 1080px;
+}
+
+.block1 {
+  width: 56vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.block2 {
+  width: 44vw;
+  background-image: url("https://psv4.userapi.com/c856328/u143195712/docs/d14/fd53d21ea25e/main_page.jpg?extra=y5OeTSBs1e3MAE43Tu5Ree7BDxdJlU856sh_N57x8c1XqJYgjqoAdapFF7dUcyuZMGwRfpO-nWpImqeu3bo2q1ZjrhqQb0wF89ZNg1oiz2hOAO-Gx3erdFMOAwtayYz7nIPEecJD25dmM-fONQPTDoPp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 42vw;
-  height: 1070px;
-  position: absolute;
-  top: -1.2em;
-  right: 0;
-  z-index: -2;
+}
+
+.block3 {
+  max-width: 700px;
 }
 
 /*# sourceMappingURL=styles.css.map */

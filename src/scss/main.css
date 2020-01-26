@@ -4,7 +4,7 @@
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #F6F6F6;
 }
 
@@ -115,7 +115,7 @@ header {
 
 .find_input {
   height: 70px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   width: 100%;
   font-weight: 500;
@@ -203,7 +203,7 @@ header {
   position: absolute;
   width: 1075px;
   height: 957px;
-  background-image: url("https://psv4.userapi.com/c856324/u143195712/docs/d4/48c45e98bbea/line-back.png?extra=HufcoxDJbCXCdVO61dQi-hHCs-E8PDLtBOMb4xsClnn8ONMoPP0G9-BfRwWBfDpKUQmz1Bsz5cKNXLFgqcNuZUIMAqzQG5r8mmYNIz66RD8ceuDPDM5xYreQHY3Sa5bq-gAxAhB2feUrKouP2lA7K-kW")
+  background-image: url("https://psv4.userapi.com/c856324/u143195712/docs/d4/48c45e98bbea/line-back.png?extra=HufcoxDJbCXCdVO61dQi-hHCs-E8PDLtBOMb4xsClnn8ONMoPP0G9-BfRwWBfDpKUQmz1Bsz5cKNXLFgqcNuZUIMAqzQG5r8mmYNIz66RD8ceuDPDM5xYreQHY3Sa5bq-gAxAhB2feUrKouP2lA7K-kW");
 }
 
 .info-and-arrows {
@@ -233,7 +233,7 @@ header {
   font-weight: 400;
   height: 40px;
   width: 150px;
-  opacity: .9;
+  opacity: 0.9;
   background-color: var(--purple-color);
   color: white;
   display: flex;
@@ -270,7 +270,7 @@ header {
 
 .arrow {
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,7 +282,7 @@ header {
 }
 
 .arrow:hover {
-  transition: .3s;
+  transition: 0.3s;
   background-color: var(--purple-color);
   border: 3px solid var(--purple-color);
   color: white;
@@ -306,12 +306,12 @@ header {
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   transition: 1s;
 }
 
 .blackout:hover {
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, 0.1);
   transition: 1s;
 }
 
@@ -327,7 +327,7 @@ header {
 
 .circle-play-two {
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -339,7 +339,7 @@ header {
 }
 
 .circle-play-two:hover {
-  transition: .3s;
+  transition: 0.3s;
   height: 100px;
   width: 100px;
 }
@@ -349,7 +349,6 @@ header {
   display: flex;
   height: 1080px;
 }
-
 
 .block1 {
   width: 56vw;
@@ -368,3 +367,5 @@ header {
 .block3 {
   max-width: 700px;
 }
+
+/*# sourceMappingURL=main.css.map */
