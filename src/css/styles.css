@@ -6,6 +6,7 @@
 html {
   font-family: "Montserrat", sans-serif;
   background-color: #F6F6F6;
+  outline: 0;
 }
 
 :root {
@@ -32,10 +33,9 @@ header {
 }
 
 .main-img {
+  background-image: url("https://i.ibb.co/zby7Kps/main.jpg");
   position: absolute;
-  background-image: url("https://psv4.userapi.com/c856328/u143195712/docs/d14/fd53d21ea25e/main_page.jpg?extra=y5OeTSBs1e3MAE43Tu5Ree7BDxdJlU856sh_N57x8c1XqJYgjqoAdapFF7dUcyuZMGwRfpO-nWpImqeu3bo2q1ZjrhqQb0wF89ZNg1oiz2hOAO-Gx3erdFMOAwtayYz7nIPEecJD25dmM-fONQPTDoPp");
-  background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   height: 1080px;
   width: 44vw;
@@ -46,13 +46,11 @@ header {
 
 .content {
   width: 36.5vw;
-  height: 1080px;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1170px;
-  height: 500px;
 }
 
 .logo-and-navbar {
@@ -114,17 +112,17 @@ header {
 }
 
 .find_input {
+  padding-left: 70px;
   height: 70px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  width: 100%;
+  width: 621px;
   font-weight: 500;
   border: none;
   outline: 0;
 }
 
 .button-search {
-  margin-top: 828px;
   font-size: 18px;
   font-weight: 500;
   width: 200px;
@@ -344,28 +342,250 @@ header {
   width: 100px;
 }
 
-.allblock {
+.clients {
   width: 100%;
   display: flex;
-  height: 1080px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.block1 {
-  width: 56vw;
+.arrow-clients {
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 19px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--purple-color);
 }
 
-.block2 {
-  width: 44vw;
-  background-image: url("https://psv4.userapi.com/c856328/u143195712/docs/d14/fd53d21ea25e/main_page.jpg?extra=y5OeTSBs1e3MAE43Tu5Ree7BDxdJlU856sh_N57x8c1XqJYgjqoAdapFF7dUcyuZMGwRfpO-nWpImqeu3bo2q1ZjrhqQb0wF89ZNg1oiz2hOAO-Gx3erdFMOAwtayYz7nIPEecJD25dmM-fONQPTDoPp");
-  background-position: center;
+.arrow-clients:hover {
+  transition: 0.3s;
+  height: 50px;
+  width: 50px;
+}
+
+.path-about-clients {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-image: url("https://i.ibb.co/qnMWXwk/circles.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 220px;
+}
+
+.client {
+  border-radius: 50%;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
-.block3 {
-  max-width: 700px;
+.small {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+
+.medium {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+}
+
+.big {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+
+.num1 {
+  background-image: url("https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.num2 {
+  background-image: url("https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.num3 {
+  background-image: url("https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.num4 {
+  background-image: url("https://images.pexels.com/photos/1082962/pexels-photo-1082962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.num5 {
+  background-image: url("https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.name-client {
+  margin: 30px 0;
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.review {
+  margin: 0 auto;
+  width: 400px;
+  font-size: 14px;
+  color: var(--gray-color);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.feedback {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("http://cita.com.ua/img/ntours/big/4/1049071809.jpg");
+  margin-bottom: 130px;
+}
+
+.outdark-feedback {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: rgba(67, 58, 139, 0.7);
+}
+
+.input-mail-and-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-email {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: 0;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.block-inp-and-button {
+  margin-top: 110px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  height: 60px;
+  width: 850px;
+  border-radius: 100px;
+}
+
+.button-book {
+  cursor: pointer;
+  border-radius: 100px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 250px;
+  background-color: var(--purple-color);
+}
+
+.text-end {
+  margin-top: 52px;
+  font-size: 60px;
+  font-weight: 900;
+  color: white;
+}
+
+.info-under-logo {
+  margin: 20px 0px;
+  width: 500px;
+  font-size: 14px;
+  color: var(--gray-color);
+  font-weight: 500;
+}
+
+.icon-social {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+.icon {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  font-size: 27px;
+  transition: 0.3s;
+  color: var(--purple-color);
+  cursor: pointer;
+}
+
+.left-and-right-path {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-path-footer {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.made {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 95px;
+  border-top: 1px solid #E3E3E3;
+}
+
+.column {
+  margin-left: 10px;
+}
+
+.heart {
+  padding: 0 3px;
+  color: #FE0000;
+}
+
+.title-footer-right {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.items-footer-right {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-color);
+}
+
+.item {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.item:hover {
+  transition: 0.3s;
+  color: var(--purple-color);
 }
 
 /*# sourceMappingURL=styles.css.map */
