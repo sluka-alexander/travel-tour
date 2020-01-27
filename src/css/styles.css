@@ -116,7 +116,7 @@ header {
   height: 70px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  width: 621px;
+  width: 20vw;
   font-weight: 500;
   border: none;
   outline: 0;
@@ -133,6 +133,15 @@ header {
   color: white;
   background-color: var(--purple-color);
   cursor: pointer;
+}
+
+.experience-travel {
+  width: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../img/experience-travel-back.jpg);
+  padding-bottom: 50px;
 }
 
 .all-boxes {
@@ -169,7 +178,7 @@ header {
 }
 
 .text-box {
-  width: 272px;
+  max-width: 272px;
 }
 
 .title-box {
@@ -224,6 +233,14 @@ header {
   font-weight: 500;
   margin-bottom: 100px;
   width: 100%;
+}
+
+.choose-caterory {
+  background-image: url(../../img/choose-category.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0px;
+  padding-bottom: 100px;
 }
 
 .name-category {
@@ -286,6 +303,14 @@ header {
   color: white;
 }
 
+.adventure-trip {
+  padding-bottom: 100px;
+  width: 100%;
+  background-image: url(../../img/video-back.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .video-cover {
   margin-bottom: 130px;
   display: flex;
@@ -293,7 +318,6 @@ header {
   align-items: center;
   width: 100%;
   height: 700px;
-  background-color: black;
   background-image: url("http://www.travelstart.co.ke/blog/wp-content/uploads/2017/12/48.jpg");
   background-size: cover;
 }
@@ -368,17 +392,18 @@ header {
   width: 50px;
 }
 
-.path-about-clients {
+.awesome-clients {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-image: url("https://i.ibb.co/qnMWXwk/circles.jpg");
+  background-image: url(../../img/circles.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0 220px;
 }
 
 .client {
+  cursor: pointer;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
@@ -447,7 +472,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("http://cita.com.ua/img/ntours/big/4/1049071809.jpg");
-  margin-bottom: 130px;
 }
 
 .outdark-feedback {
@@ -482,7 +506,7 @@ header {
   justify-content: space-between;
   padding: 10px 10px;
   height: 60px;
-  width: 850px;
+  width: 40vw;
   border-radius: 100px;
 }
 
@@ -536,6 +560,7 @@ header {
 }
 
 .left-and-right-path {
+  padding-top: 100px;
   display: flex;
   justify-content: space-between;
 }
@@ -583,9 +608,43 @@ header {
   transition: 0.3s;
 }
 
-.item:hover {
+.item::after {
+  content: "";
+  display: block;
+  border-radius: 50px;
+  transition: 0.5s;
+  height: 3px;
+  width: 20px;
+  background-color: var(--purple-color);
+}
+
+.item:hover::after {
+  transition: 0.5s;
+  content: "";
+  width: 100%;
+}
+
+.item-line:hover {
+  transition: 0.5s;
+  width: 100%;
+}
+
+.item-footer {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.item-footer:hover {
   transition: 0.3s;
   color: var(--purple-color);
+}
+
+.footer {
+  width: 100%;
+  background-image: url("../../img/footer-back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
