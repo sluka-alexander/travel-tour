@@ -1,6 +1,7 @@
-* {
+*, *:after, *:before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,7 +12,7 @@ html {
 
 :root {
   --purple-color: #433A8B;
-  --pink-color: #fe6091;
+  --pink-color: #FE6091;
   --gray-color: #999999;
 }
 
@@ -25,6 +26,10 @@ h1 {
 h2 {
   font-size: 22px;
   font-weight: 600;
+}
+
+input {
+  font: inherit;
 }
 
 header {
@@ -79,13 +84,13 @@ header {
 }
 
 .contact-us {
+  height: 50px;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   background-color: white;
-  height: 50px;
-  width: 200px;
   font-weight: 600;
   font-size: 18px;
   transition: 0.3s;
@@ -299,6 +304,15 @@ header {
   width: 110px;
 }
 
+.circle-play, .blackout {
+  display: flex;
+}
+
+.circle-play, .blackout {
+  justify-content: center;
+  align-items: center;
+}
+
 .arrow {
   cursor: pointer;
   transition: 0.3s;
@@ -339,9 +353,6 @@ header {
 }
 
 .blackout {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -354,9 +365,6 @@ header {
 }
 
 .circle-play {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 130px;
   width: 130px;
   border-radius: 50%;
