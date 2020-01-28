@@ -11,6 +11,7 @@ html {
 
 :root {
   --purple-color: #433A8B;
+  --pink-color: #fe6091;
   --gray-color: #999999;
 }
 
@@ -87,6 +88,12 @@ header {
   width: 200px;
   font-weight: 600;
   font-size: 18px;
+  transition: .3s;
+}
+
+.contact-us:hover {
+  transition: .3s;
+  opacity: .7;
 }
 
 .main-info {
@@ -102,7 +109,6 @@ header {
 
 .subtitle-info {
   color: #989898;
-  margin-bottom: 40px;
 }
 
 .input-and-button {
@@ -133,6 +139,12 @@ header {
   color: white;
   background-color: var(--purple-color);
   cursor: pointer;
+  transition: .3s;
+}
+
+.button-search:hover {
+  transition: .3s;
+  background-color: var(--pink-color);
 }
 
 .experience-travel {
@@ -159,6 +171,7 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .img-experience-1 {
@@ -200,17 +213,21 @@ header {
   position: absolute;
   width: 567px;
   height: 453px;
-  background-image: url("https://psv4.userapi.com/c856328/u143195712/docs/d8/ad3b70e7067a/circle.png?extra=dniRHgI9X3dM-NChgcJjcvWbockIynDXl3CZQ-5wbLNOwSM0CNM7rE4oN9iQTSttSklELKjnNh428qj2YQ_cIeKys_KEyc42R68vO5T726O35wsuYDQfhLnlCfF6Zs5ucJzO-NkreM1OS2zQpDUciose");
+  background-image: url(../../img/circle.png);
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .line-back {
-  z-index: -4;
+  z-index: -7;
   left: 0;
   top: 0;
   position: absolute;
-  width: 1075px;
+  width: 100%;
   height: 957px;
-  background-image: url("https://psv4.userapi.com/c856324/u143195712/docs/d4/48c45e98bbea/line-back.png?extra=HufcoxDJbCXCdVO61dQi-hHCs-E8PDLtBOMb4xsClnn8ONMoPP0G9-BfRwWBfDpKUQmz1Bsz5cKNXLFgqcNuZUIMAqzQG5r8mmYNIz66RD8ceuDPDM5xYreQHY3Sa5bq-gAxAhB2feUrKouP2lA7K-kW")
+  background-image: url(../../img/line-back.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .info-and-arrows {
@@ -396,10 +413,10 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-image: url(../../img/circles.jpg);
-  background-size: contain;
+  background-image: url(../../img/circles.png);
+  background-size: auto;
   background-repeat: no-repeat;
-  background-position: 0 220px;
+  background-position: center center;
 }
 
 .client {
@@ -529,6 +546,12 @@ header {
   height: 60px;
   width: 250px;
   background-color: var(--purple-color);
+  transition: .3s;
+}
+
+.button-book:hover {
+  transition: .3s;
+  background-color: var(--pink-color);
 }
 
 .text-end {
@@ -562,7 +585,7 @@ header {
 .icon:hover {
   font-size: 27px;
   transition: .3s;
-  color: var(--purple-color);
+  color: var(--pink-color);
   cursor: pointer;
 }
 
@@ -652,4 +675,42 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (max-width: 1150px) {
+  .box {
+    height: 280px;
+    width: 200px;
+  }
+  .text-box {
+    max-width: 200px;
+  }
+  .logo-and-navbar {
+    flex-wrap: wrap;
+  }
+  .box-and-text {
+    margin-bottom: 20px;
+  }
+  .left-and-right-path {
+    flex-wrap: wrap;
+  }
+  .text-end {
+    font-size: 40px;
+  }
+;
+}
+
+@media (max-width: 825px) {
+  .all-boxes {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 270px;
+    height: 400px;
+    margin-top: 50px;
+  }
+  .text-box {
+    max-width: 270px;
+  }
 }
