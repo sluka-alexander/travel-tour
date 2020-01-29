@@ -1,26 +1,26 @@
-.box, .navbar, .up-content__arrows, .up-content, .boxes, header, .circle-play, .blackout, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us {
+.box, .navbar, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .up-content, .boxes, header, .made, .email__button, .awesome-clients__info__name, .awesome-clients__slider__arrow, .circle-play, .blackout, .video-cover, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us {
   display: flex;
 }
 
-.circle-play, .blackout, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us {
+.made, .email__button, .awesome-clients__info__name, .awesome-clients__slider__arrow, .circle-play, .blackout, .video-cover, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us {
   justify-content: center;
   align-items: center;
 }
 
-.up-content__arrows, .up-content, .boxes, header {
+.content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .up-content, .boxes, header {
   justify-content: space-between;
 }
 
-.box, .navbar, .circle-play, .blackout, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us, .up-content__arrows, .up-content, .boxes, header {
+.box, .navbar, .made, .email__button, .awesome-clients__info__name, .awesome-clients__slider__arrow, .circle-play, .blackout, .video-cover, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .up-content, .boxes, header {
   display: flex;
 }
 
-.circle-play, .blackout, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us {
+.made, .email__button, .awesome-clients__info__name, .awesome-clients__slider__arrow, .circle-play, .blackout, .video-cover, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us {
   justify-content: center;
   align-items: center;
 }
 
-.up-content__arrows, .up-content, .boxes, header {
+.content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .up-content, .boxes, header {
   justify-content: space-between;
 }
 
@@ -46,6 +46,7 @@ header {
 }
 
 .logo {
+  cursor: pointer;
   font-weight: 900;
   color: #433A8B;
   font-size: calc( 0 * 100vw + 36px );
@@ -302,14 +303,14 @@ input {
   .experience__column {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 250px;
+    width: 270px;
   }
 }
 @media screen and (min-width: 768px) {
   .experience__column {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 150px;
+    width: 170px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -354,19 +355,19 @@ input {
 }
 
 .img-experience-1 {
-  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/56558719_409228822990474_3644209115700957157_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=110&_nc_ohc=NNhp8Y6ChS8AX-J9iGa&oh=053b1f2b9cbe39abc501de4ec9352724&oe=5EB7695F");
+  background-image: url("../../img/experience/1.jpg");
 }
 
 .img-experience-2 {
-  background-image: url("https://scontent-arn2-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80644304_637018030384337_6567613158327309370_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105&_nc_ohc=_Si_ny3g-t0AX8jS8M8&oh=e0274f0f6559c47cc1a5a23c25abf19a&oe=5EC3FAB3");
+  background-image: url("../../img/experience/2.jpg");
 }
 
 .img-experience-3 {
-  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/81897907_982353628817748_7775538246734106595_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=100&_nc_ohc=wo7X49C_avEAX-NpeqU&oh=2bbe7d223a994b52fffc4eb44ad0b06c&oe=5EC7E37C");
+  background-image: url("../../img/experience/3.jpg");
 }
 
 .img-experience-4 {
-  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/71922423_1180665852323298_4010668248192934104_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=106&_nc_ohc=UO7q2DV3wMUAX-86TuW&oh=3e4bf87600a408e3b6520df0b2481071&oe=5EB8D43A");
+  background-image: url("../../img/experience/4.jpg");
 }
 
 .title-box {
@@ -388,7 +389,7 @@ input {
   left: 0;
   top: 0;
   position: absolute;
-  width: 567px;
+  width: 100%;
   height: 453px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -410,20 +411,20 @@ input {
   }
 }
 
-.img-category1 {
-  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/73177683_886357455273492_3040981951662070318_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=100&_nc_ohc=L7t8gpVG3kAAX8DVieD&oh=adef4016ee8852583316c356ca41610f&oe=5ECB87FC");
+.img-category-1 {
+  background-image: url("../../img/category/1.jpg");
 }
 
-.img-category2 {
-  background-image: url("https://i.pinimg.com/originals/bc/f2/24/bcf2247e1d2484a755820f6cfbf2a3f6.jpg");
+.img-category-2 {
+  background-image: url("../../img/category/2.jpg");
 }
 
-.img-category3 {
-  background-image: url("https://www.paledivision.com/wp-content/uploads/2018/05/willabelle-ong-willamazing-blogger-fashion-travel-lifestyle-blog-top-singapore-instagram-spots-iceland-reykjavik-icelandic-mountain-photography-locations-gullfoss-waterfall-winter.jpg");
+.img-category-3 {
+  background-image: url("../../img/category/3.jpg");
 }
 
-.img-category4 {
-  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80452230_2983987128280893_1866896929975156859_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=109&_nc_ohc=XLwWxHcsSpgAX9pAEOm&oh=0178393dd8ecff8f141d10e66cdd7395&oe=5EC7406E");
+.img-category-4 {
+  background-image: url("../../img/category/4.jpg");
 }
 
 .up-content {
@@ -444,10 +445,10 @@ input {
   width: 270px;
 }
 .up-content__arrows__arrow {
-  cursor: pointer;
-  transition: 0.3s;
   height: 40px;
   width: 40px;
+  cursor: pointer;
+  transition: 0.3s;
   border: 3px solid #999999;
   color: #999999;
   font-size: 19px;
@@ -479,14 +480,11 @@ input {
 }
 
 .video-cover {
-  margin-bottom: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 700px;
+  height: 45vw;
   background-image: url("http://www.travelstart.co.ke/blog/wp-content/uploads/2017/12/48.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .blackout {
@@ -525,6 +523,248 @@ input {
   transition: 0.3s;
   height: 100px;
   width: 100px;
+}
+
+.awesome-clients {
+  width: 100%;
+  background-image: url(../../img/circles.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.awesome-clients__slider {
+  width: 100%;
+  align-items: center;
+}
+.awesome-clients__slider__arrow {
+  height: 40px;
+  width: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 19;
+  border-radius: 50%;
+  background-color: #433A8B;
+}
+.awesome-clients__slider__arrow:hover {
+  height: 50px;
+  width: 50px;
+}
+.awesome-clients__slider__client {
+  cursor: pointer;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.awesome-clients__slider__client__small {
+  height: 50px;
+  width: 50px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .awesome-clients__slider__client__small {
+    display: block;
+  }
+}
+.awesome-clients__slider__client__medium {
+  display: none;
+  height: 100px;
+  width: 100px;
+}
+@media screen and (min-width: 600px) {
+  .awesome-clients__slider__client__medium {
+    display: block;
+  }
+}
+.awesome-clients__slider__client__large {
+  height: 200px;
+  width: 200px;
+}
+.awesome-clients__info {
+  margin-bottom: 100px;
+  width: 100%;
+}
+.awesome-clients__info__name {
+  font-weight: 700;
+  color: #000000;
+  font-size: calc( 0.005625 * 100vw + 17.2px );
+  margin: 30px 0;
+}
+.awesome-clients__info__review {
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  font-size: calc( 0 * 100vw + 14px );
+  margin: 0 auto;
+}
+
+.img-clients-1 {
+  background-image: url("../../img/clients/1.jpeg");
+}
+
+.img-clients-2 {
+  background-image: url("../../img/clients/2.jpeg");
+}
+
+.img-clients-3 {
+  background-image: url("../../img/clients/3.jpeg");
+}
+
+.img-clients-4 {
+  background-image: url("../../img/clients/4.jpeg");
+}
+
+.img-clients-5 {
+  background-image: url("../../img/clients/5.jpeg");
+}
+
+.feedback {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("http://cita.com.ua/img/ntours/big/4/1049071809.jpg");
+}
+.feedback__color-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: rgba(67, 58, 139, 0.7);
+}
+
+.email {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+.email__input {
+  font-weight: 500;
+  color: #000000;
+  width: 100%;
+  padding-left: 20px;
+  border-radius: 50px;
+  font-size: calc( 0.003125 * 100vw + 13px );
+}
+.email__button {
+  height: 60px;
+  width: 200px;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: calc( 0.003125 * 100vw + 13px );
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #433A8B;
+  transition: 0.3s;
+}
+.email__button:hover {
+  transition: 0.3s;
+  background-color: #FE6091;
+}
+
+.text-end {
+  font-weight: 900;
+  color: #FFFFFF;
+  font-size: calc( 0.0225 * 100vw + 6.8px );
+}
+
+.footer {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (min-width: 1220px) {
+  .footer {
+    background-image: url("../../img/footer-back.png");
+  }
+}
+
+.content {
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    flex-direction: row;
+  }
+}
+.content__left {
+  width: 40%;
+  margin-bottom: 40px;
+}
+.content__left__logo {
+  cursor: pointer;
+  font-weight: 900;
+  color: #433A8B;
+  font-size: calc( 0 * 100vw + 36px );
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+.content__left__icons {
+  font-weight: 900;
+  color: #433A8B;
+  font-size: calc( 0.005 * 100vw + 18.4px );
+}
+.content__left__icons__icon {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.content__left__icons__icon:hover {
+  font-weight: 900;
+  color: #FE6091;
+}
+.content__right {
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 375px) {
+  .content__right {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content__right {
+    width: 40%;
+  }
+}
+.content__right__column__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #000000;
+  font-size: calc( 0.005625 * 100vw + 17.2px );
+}
+.content__right__column__items {
+  font-weight: 500;
+  color: #999999;
+  font-size: calc( 0 * 100vw + 14px );
+}
+.content__right__column__items__item {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.content__right__column__items__item:hover {
+  font-weight: 500;
+  color: #433A8B;
+}
+
+.made {
+  font-size: calc( 0.003125 * 100vw + 13px );
+  font-weight: 700;
+  color: #000000;
+  width: 100%;
+  height: 95px;
+  border-top: 1px solid #E3E3E3;
 }
 
 /*# sourceMappingURL=styles.css.map */

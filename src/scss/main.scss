@@ -4,7 +4,6 @@
 @import "common/functions";
 @import "common/ properties-of-font";
 @import "common/config";
-
 @import "blocks/starting-section";
 
 *, *:after, *:before {
@@ -126,12 +125,12 @@ input {
   @include media(small-tablet) {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 250px;
+    width: 270px;
   }
   @include media(tablet) {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 150px;
+    width: 170px;
   }
   @include media(desktop) {
     width: 180px;
@@ -169,20 +168,10 @@ input {
   }
 }
 
-.img-experience-1 {
-  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/56558719_409228822990474_3644209115700957157_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=110&_nc_ohc=NNhp8Y6ChS8AX-J9iGa&oh=053b1f2b9cbe39abc501de4ec9352724&oe=5EB7695F");
-}
-
-.img-experience-2 {
-  background-image: url("https://scontent-arn2-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80644304_637018030384337_6567613158327309370_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105&_nc_ohc=_Si_ny3g-t0AX8jS8M8&oh=e0274f0f6559c47cc1a5a23c25abf19a&oe=5EC3FAB3");
-}
-
-.img-experience-3 {
-  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/81897907_982353628817748_7775538246734106595_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=100&_nc_ohc=wo7X49C_avEAX-NpeqU&oh=2bbe7d223a994b52fffc4eb44ad0b06c&oe=5EC7E37C");
-}
-
-.img-experience-4 {
-  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/71922423_1180665852323298_4010668248192934104_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=106&_nc_ohc=UO7q2DV3wMUAX-86TuW&oh=3e4bf87600a408e3b6520df0b2481071&oe=5EB8D43A");
+@for $i from 1 through 4 {
+  .img-experience-#{$i} {
+    background-image: url("../../img/experience/#{$i}.jpg");
+  }
 }
 
 .title-box {
@@ -206,7 +195,7 @@ input {
   left: 0;
   top: 0;
   position: absolute;
-  width: 567px;
+  width: 100%;
   height: 453px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -234,28 +223,11 @@ input {
   background-position: 0 0px;
 }
 
-//.info-clients {
-//  @include text($font-S, $regular, $gray);
-//  margin-bottom: 100px;
-//  width: 100%;
-//}
-//
 
-
-.img-category1 {
-  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/73177683_886357455273492_3040981951662070318_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=100&_nc_ohc=L7t8gpVG3kAAX8DVieD&oh=adef4016ee8852583316c356ca41610f&oe=5ECB87FC");
-}
-
-.img-category2 {
-  background-image: url("https://i.pinimg.com/originals/bc/f2/24/bcf2247e1d2484a755820f6cfbf2a3f6.jpg");
-}
-
-.img-category3 {
-  background-image: url("https://www.paledivision.com/wp-content/uploads/2018/05/willabelle-ong-willamazing-blogger-fashion-travel-lifestyle-blog-top-singapore-instagram-spots-iceland-reykjavik-icelandic-mountain-photography-locations-gullfoss-waterfall-winter.jpg");
-}
-
-.img-category4 {
-  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80452230_2983987128280893_1866896929975156859_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=109&_nc_ohc=XLwWxHcsSpgAX9pAEOm&oh=0178393dd8ecff8f141d10e66cdd7395&oe=5EC7406E");
+@for $i from 1 through 4 {
+  .img-category-#{$i} {
+    background-image: url("../../img/category/#{$i}.jpg");
+  }
 }
 
 .up-content {
@@ -276,14 +248,16 @@ input {
     &__arrow {
       display: flex;
       width: 270px;
+
     }
 
     &__arrow {
       @extend %flex-center;
+
+      @include size(40px);
+
       cursor: pointer;
       transition: .3s;
-      height: 40px;
-      width: 40px;
       border: 3px solid $gray;
       color: #999999;
       font-size: 19px;
@@ -311,7 +285,6 @@ input {
   @include media(large-desktop) {
     background-image: url(../../img/video-back.jpg);
   }
-
   padding-bottom: 100px;
   width: 100%;
   background-size: contain;
@@ -320,14 +293,12 @@ input {
 }
 
 .video-cover {
-  margin-bottom: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
   width: 100%;
-  height: 700px;
+  height: 45vw;
   background-image: url("http://www.travelstart.co.ke/blog/wp-content/uploads/2017/12/48.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .blackout {
@@ -371,182 +342,249 @@ input {
 }
 
 //-------------------------------------------------------------------------
-//
-//.clients {
-//  width: 100%;
-//  @extend %flex-between;
-//  align-items: center;
-//}
-//
-//.arrow-clients {
-//  transition: .3s;
-//  cursor: pointer;
-//  font-size: 19px;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  height: 40px;
-//  width: 40px;
-//  border-radius: 50%;
-//  background-color: $purple;
-//}
-//
-//.arrow-clients:hover {
-//  transition: .3s;
-//  height: 50px;
-//  width: 50px;
-//}
-//
-//.awesome-clients {
-//  @extend %flex-between;
-//  margin-bottom: 100px;
-//  width: 100%;
-//  background-image: url(../../img/circles.png);
-//  background-size: auto;
-//  background-repeat: no-repeat;
-//  background-position: center center;
-//}
-//
-//.client {
-//  cursor: pointer;
-//  border-radius: 50%;
-//  background-size: cover;
-//  background-position: center;
-//  background-repeat: no-repeat;
-//}
-//
-//.small {
-//  @include size(50px);
-//}
-//
-//.medium {
-//  height: 100px;
-//  width: 100px;
-//}
-//
-//.big {
-//  height: 200px;
-//  width: 200px;
-//}
-//
-//.num1 {
-//  background-image: url("https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-//}
-//
-//.num2 {
-//  background-image: url("https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-//}
-//
-//.num3 {
-//  background-image: url("https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-//}
-//
-//.num4 {
-//  background-image: url("https://images.pexels.com/photos/1082962/pexels-photo-1082962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-//}
-//
-//.num5 {
-//  background-image: url("https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-//}
-//
-//.name-client {
-//  @extend %flex-center;
-//  @include text($font-L, $bold);
-//  margin: 30px 0;
-//}
-//
-//.review {
-//  @include text($font-S, $regular, $gray);
-//  @extend %flex-center;
-//  width: 400px;
-//  text-align: center;
-//  margin: 0 auto;
-//}
-//
-//.feedback {
-//  width: 100%;
-//  height: 300px;
-//  background-size: cover;
-//  background-position: center;
-//  background-repeat: no-repeat;
-//  background-image: url("http://cita.com.ua/img/ntours/big/4/1049071809.jpg");
-//}
-//
-//.outdark-feedback {
-//  display: flex;
-//  flex-direction: column;
-//  width: 100%;
-//  height: 100%;
-//  background: rgba(67, 58, 139, 0.7);
-//}
-//
-//.input-mail-and-button {
-//  display: flex;
-//  justify-content: center;
-//  width: 100%;
-//}
-//
-////.point-texture{
-////  width: 100%;
-////  height: 100%;
-////  filter: invert(100%);
-////  background-image: url("https://avatanplus.com/files/resources/mid/5b90334d09c16165ab4864f0.png");
-////  opacity: .2;
-////}
-//
-//.input-email {
-//  @include text($font-S, $regular, $gray);
-//  font-family: 'Montserrat', sans-serif;
-//  border: none;
-//  outline: 0;
-//  width: 100%;
-//  padding-left: 20px;
-//}
-//
-//.block-inp-and-button {
-//  @extend %flex-between;
-//  margin-top: 110px;
-//  background-color: white;
-//  padding: 10px 10px;
-//  height: 60px;
-//  width: 40vw;
-//  border-radius: 100px;
-//}
-//
-//.button-book {
-//  cursor: pointer;
-//  border-radius: 100px;
-//  color: white;
-//  font-size: 14px;
-//  font-weight: 500;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  height: 60px;
-//  width: 250px;
-//  background-color: $purple;
-//  transition: .3s;
-//}
-//
-//.button-book:hover {
-//  transition: .3s;
-//  background-color: $pink;
-//}
-//
-//.text-end {
-//  margin-top: 52px;
-//  font-size: 60px;
-//  font-weight: 900;
-//  color: white;
-//}
-//
-//.info-under-logo {
-//  margin: 20px 0px;
-//  width: 500px;
-//  color: $gray;
-//  font-weight: 500;
-//}
-//
+
+.awesome-clients {
+  width: 100%;
+  background-image: url(../../img/circles.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__slider {
+    width: 100%;
+    align-items: center;
+
+    @extend %flex-between;
+
+    &__arrow {
+      @extend %flex-center;
+      @include size(40px);
+
+      transition: .3s;
+      cursor: pointer;
+      font-size: #{$font-M};
+
+      border-radius: 50%;
+      background-color: $purple;
+
+      &:hover {
+        @include size(50px);
+      }
+    }
+
+    &__client {
+      cursor: pointer;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+
+      &__small {
+        @include size(50px);
+        display: none;
+
+        @include media(tablet) {
+          display: block;
+        }
+      }
+
+      &__medium {
+        display: none;
+
+        @include media(small-tablet) {
+          display: block;
+        }
+        @include size(100px);
+      }
+
+      &__large {
+        @include size(200px);
+      }
+    }
+
+  }
+
+  &__info {
+    margin-bottom: 100px;
+    width: 100%;
+
+    &__name {
+      @extend %flex-center;
+      @include color-and-weight($black, $bold);
+      font-size: calcFluidFontSize($font-M, $font-L, 320, 1920);
+      margin: 30px 0;
+    }
+
+    &__review {
+      @include color-and-weight($gray, $regular);
+
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
+      margin: 0 auto;
+    }
+  }
+
+}
+
+@for $i from 1 through 5 {
+  .img-clients-#{$i} {
+    background-image: url("../../img/clients/#{$i}.jpeg");
+  }
+}
+
+
+.feedback {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("http://cita.com.ua/img/ntours/big/4/1049071809.jpg");
+
+  &__color-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(67, 58, 139, 0.7);
+  }
+}
+
+.email {
+  @extend %flex-between;
+  width: 100%;
+  background-color: $white;
+  border-radius: 50px;
+  padding: 10px;
+  margin-bottom: 50px;
+
+  &__input {
+    @include color-and-weight($black, $regular);
+    width: 100%;
+    padding-left: 20px;
+    border-radius: 50px;
+    font-size: calcFluidFontSize(14, $font-M, 320, 1920);
+  }
+
+  &__button {
+    @include size(200px, 60px);
+    @include color-and-weight($white, $medium);
+    @extend %flex-center;
+
+    font-size: calcFluidFontSize(14, $font-M, 320, 1920);
+    color: white;
+    font-weight: 500;
+
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: $purple;
+    transition: .3s;
+
+    &:hover {
+      transition: .3s;
+      background-color: $pink;
+    }
+  }
+
+}
+
+.text-end {
+  @include color-and-weight($white, $extra-bold);
+  font-size: calcFluidFontSize(14, $font-XL, 320, 1920);
+}
+
+//---------------------------------------------------
+
+.footer {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include media(large-desktop) {
+    background-image: url('../../img/footer-back.png');
+  }
+}
+
+.content {
+  @extend %flex-between;
+  flex-direction: column;
+
+  @include media(desktop) {
+    flex-direction: row;
+  }
+
+  &__left {
+    width: 40%;
+    margin-bottom: 40px;
+
+    &__logo {
+      cursor: pointer;
+      @include color-and-weight($purple, $extra-bold);
+      font-size: calcFluidFontSize($font-logo, $font-logo, 320, 1920);
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+    }
+
+    &__icons {
+      @include color-and-weight($purple, $extra-bold);
+
+      font-size: calcFluidFontSize(20, $font-L, 320, 1920);
+
+      &__icon {
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+          @include color-and-weight($pink, $extra-bold);
+        }
+      }
+    }
+  }
+
+  &__right {
+    @extend %flex-between;
+    flex-direction: column;
+    @include media(mobile) {
+      flex-direction: row;
+    }
+    @include media(desktop) {
+      width: 40%;
+    }
+
+    width: 100%;
+
+    &__column {
+      &__title {
+        margin-bottom: 10px;
+        @include color-and-weight($black, $bold);
+        font-size: calcFluidFontSize($font-M, $font-L, 320, 1920);
+      }
+
+      &__items {
+        @include color-and-weight($gray, $regular);
+        font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
+
+        &__item {
+          transition: .3s;
+          cursor: pointer;
+
+          &:hover {
+            @include color-and-weight($purple, $regular);
+          }
+        }
+      }
+    }
+  }
+}
+
+
 //.icon-social {
 //  display: flex;
 //  @extend %flex-between;
@@ -577,13 +615,16 @@ input {
 //  @extend %flex-between;
 //}
 //
-//.made {
-//  @include text($font-M, $bold);
-//  @extend %flex-center;
-//  width: 100%;
-//  height: 95px;
-//  border-top: 1px solid #E3E3E3;
-//}
+.made {
+  @extend %flex-center;
+  font-size: calcFluidFontSize(14, $font-M, 320, 1920);
+  @include color-and-weight($black, $bold);
+
+  width: 100%;
+  height: 95px;
+  border-top: 1px solid #E3E3E3;
+}
+
 //
 //.column {
 //  margin-left: 10px;
@@ -622,17 +663,3 @@ input {
 //  color: $purple;
 //}
 //
-//.footer {
-//  @include text($font-S, $medium, $gray);
-//  width: 100%;
-//  background-image: url('../../img/footer-back.png');
-//  background-size: cover;
-//  background-repeat: no-repeat;
-//  background-position: center;
-//}
-
-//@mixin mq($width) {
-//  @media all(min-width: $width) {
-//    @content;
-//  }
-//}

@@ -27,6 +27,7 @@ header {
 }
 
 .logo {
+  cursor: pointer;
   @include color-and-weight($purple, $extra-bold);
   font-size: calcFluidFontSize($font-logo, $font-logo, 320, 1920);
   display: flex;
