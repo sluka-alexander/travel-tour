@@ -2,3 +2,14 @@
   height: $height;
   width: $width;
 }
+
+@mixin color-and-weight($color: black, $weight: 500 ) {
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin media($media){
+  @media screen and (min-width: $media){
+    @content;
+  }
+}
