@@ -1,3 +1,5 @@
+@import "config";
+
 @mixin size($width, $height: $width) {
   height: $height;
   width: $width;
@@ -8,8 +10,8 @@
   color: $color;
 }
 
-@mixin media($media){
-  @media screen and (min-width: $media){
+@mixin media($device){
+  @media screen and (min-width: map_get($breakpoints, $device)){
     @content;
   }
 }

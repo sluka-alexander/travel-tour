@@ -1,157 +1,11 @@
 @import "common/mixins";
-@import "common/extendes";
+@import "common/placeholders";
 @import "common/color";
-@import "common/function";
+@import "common/functions";
 @import "common/ properties-of-font";
-
+@import "common/config";
 
 @import "blocks/starting-section";
-
-//---------------------------first-------------------
-
-header {
-  @extend %flex-between;
-  @include color-and-weight($gray,$medium);
-  font-size: calcFluidFontSize(14,$font-M,320,1920);
-  margin-top: 60px;
-  @include media(320px) {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  @include media(760px) {
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-  @include media(1170px) {
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-}
-
-.logo-and-navbar {
-  width: 70%;
-  @extend %flex-between;
-  @include media(320px) {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  @include media(1170px) {
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-}
-
-.logo {
-  @include color-and-weight($purple,$extra-bold);
-  font-size: calcFluidFontSize($font-logo,$font-logo,320,1920);
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-}
-
-.navbar {
-  @extend %flex-between;
-  @include media(320px) {
-    flex-direction: column;
-    margin: 15px 0;
-  }
-  @include media(1170px) {
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-}
-
-.navbar__item {
-  cursor: pointer;
-  margin-right: 20px;
-  transition: .3s;
-}
-
-.navbar__item::after {
-  @include size(20px, 3px);
-  content: "";
-  display: block;
-  border-radius: 50px;
-  transition: .5s;
-  background-color: $purple;
-}
-
-.navbar__item:hover::after {
-  transition: .5s;
-  content: "";
-  width: 100%;
-}
-.contact-us {
-  @include size(200px, 50px);
-  @extend %flex-center;
-  cursor: pointer;
-  background-color: $white;
-  transition: .3s;
-}
-
-.contact-us:hover {
-  transition: .3s;
-  opacity: .7;
-}
-
-.main-info {
-  margin-top: 360px;
-  @include media(320px) {
-    margin-top: 100px;
-  }
-}
-
-.main__title {
-  color: $black;
-}
-
-.input-and-button {
-  margin-top: 150px;
-  width: 100%;
-  //display: flex;
-  margin-bottom: 200px;
-}
-
-.find_input {
-  @include color-and-weight($gray,$medium);
-  font-size: calcFluidFontSize(14,$font-M,320,1920);
-  padding-left: 10px;
-  height: 30px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  width: 100%;
-  border: none;
-  outline: 0;
-  margin-bottom: 15px;
-}
-
-.button-search {
-  margin: 0 auto;
-  @include color-and-weight($white,$medium);
-  font-size: calcFluidFontSize(14,$font-M,320,1920);
-  @extend %flex-center;
-  width: 200px;
-  height: 70px;
-  background-color: $purple;
-  cursor: pointer;
-  transition: .3s;
-
-}
-
-.button-search:hover {
-  transition: .3s;
-  background-color: $pink;
-}
-
-//------------------------------------------------
-
-
-
-
-
-
-
-
 
 *, *:after, *:before {
   margin: 0;
@@ -165,133 +19,199 @@ html {
   outline: 0;
 }
 
+input {
+  border: none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
+  transition: .3s;
   margin: 0 auto;
-  //background-color: red;
-  @include media(320px) {
-    max-width: 80vw;
+  max-width: 300px;
+  min-width: 300px;
+
+  @include media(mobile) {
+    max-width: 360px;
+
   }
-  @include media(1170px) {
-    max-width: 65vw;
+  @include media(small-tablet) {
+    max-width: 560px;
+
+  }
+  @include media(tablet) {
+    max-width: 700px;
+  }
+
+  @include media(desktop) {
+    max-width: 960px;
+  }
+  @include media(large-desktop) {
+    max-width: 1170px;
   }
 ;
 }
 
 .title {
-  @include color-and-weight($black,$extra-bold);
-    font-size: calcFluidFontSize(25,$font-XL,320,1920);
+  @include color-and-weight($purple, $extra-bold);
+  font-size: calcFluidFontSize(25, $font-XL, 320, 1920);
+  margin: 30px 0;
 }
 
 .subtitle {
-  @include color-and-weight($gray,bold);
-  font-size: calcFluidFontSize(20,$font-L,320,1920);
+  @include color-and-weight($gray, $regular);
+  font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
+  margin-bottom: 30px;
+  max-width: 600px;
 }
 
-//
-//.main-img {
-//  background-image: url("https://i.ibb.co/zby7Kps/main.jpg");
-//  position: absolute;
-//  background-size: contain;
-//  background-repeat: no-repeat;
-//  height: 1080px;
-//  width: 44vw;
-//  right: 0;
-//  top: 0;
-//  z-index: -6;
-//}
-//
-//.content {
-//  width: 36.5vw;
-//}
-//
-//
-//
-//.experience {
-//  width: 100%;
-//  background-position: 0 0;
-//  background-repeat: no-repeat;
-//  background-size: contain;
-//  background-image: url(../../img/experience-travel-back.jpg);
-//  padding-bottom: 50px;
-//  @include media(320px) {
-//    background-image: none;
-//  }
-//}
-//
-//.boxes {
-//  @extend %flex-between;
-//  margin-bottom: 140px;
-//  width: 100%;
-//
-//  @include media(320px) {
-//    flex-direction: column;
-//  }@include media(480px) {
-//    flex-direction: row;
-//  }
-//;
-//}
-//
-//.box {
-//  @extend %flex;
-//  justify-content: flex-end;
-//  height: 400px;
-//  width: 270px;
-//  background-position: center;
-//  background-size: cover;
-//  background-repeat: no-repeat;
-//  @include media(320px) {
-//    width: 100%;
-//  }
-//;
-//}
-//
-//.experience__column {
-//  margin-bottom: 40px;
-//  width: 100%;
-//}
-//
-//.img-experience-1 {
-//  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/56558719_409228822990474_3644209115700957157_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=110&_nc_ohc=NNhp8Y6ChS8AX-J9iGa&oh=053b1f2b9cbe39abc501de4ec9352724&oe=5EB7695F");
-//}
-//
-//.img-experience-2 {
-//  background-image: url("https://scontent-arn2-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80644304_637018030384337_6567613158327309370_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105&_nc_ohc=_Si_ny3g-t0AX8jS8M8&oh=e0274f0f6559c47cc1a5a23c25abf19a&oe=5EC3FAB3");
-//}
-//
-//.img-experience-3 {
-//  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/81897907_982353628817748_7775538246734106595_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=100&_nc_ohc=wo7X49C_avEAX-NpeqU&oh=2bbe7d223a994b52fffc4eb44ad0b06c&oe=5EC7E37C");
-//}
-//
-//.img-experience-4 {
-//  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/71922423_1180665852323298_4010668248192934104_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=106&_nc_ohc=UO7q2DV3wMUAX-86TuW&oh=3e4bf87600a408e3b6520df0b2481071&oe=5EB8D43A");
-//}
-//
-//.text-box {
-//  max-width: 272px;
-//}
-//
-//.title-box {
-//  margin: 30px 0;
-//  @include text($font-L, $bold);
-//
-//}
-//
-//.subtitle-box {
-//  @include text($font-S, $regular, $gray);
-//}
-//
-//.circle {
-//  z-index: -3;
-//  left: 0;
-//  top: 0;
-//  position: absolute;
-//  width: 567px;
-//  height: 453px;
-//  background-image: url(../../img/circle.png);
-//  background-size: auto;
-//  background-repeat: no-repeat;
-//}
-//
+
+.main-img {
+  @include media(large-desktop) {
+    background-image: url("https://i.ibb.co/zby7Kps/main.jpg");
+  }
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 1080px;
+  width: 44vw;
+  right: 0;
+  top: 0;
+  z-index: -6;
+}
+
+
+.experience {
+
+  width: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: 50px;
+
+  @include media(large-desktop) {
+    background-image: url(../../img/experience-travel-back.jpg);
+  }
+}
+
+.boxes {
+  @extend %flex-between;
+  //flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include media(mobile) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  @include media(mini-tablet) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  @include media(large-desktop) {
+    justify-content: space-between;
+  }
+}
+
+.experience__column {
+  margin-bottom: 40px;
+  width: 100%;
+  @include media(mobile) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+  }
+  @include media(small-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 250px;
+  }
+  @include media(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 150px;
+  }
+  @include media(desktop) {
+    width: 180px;
+  }
+  @include media(large-desktop) {
+    width: 270px;
+  }
+
+}
+
+.box {
+  @extend %flex;
+  justify-content: flex-end;
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include media(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 250px;
+  }
+  @include media(large-desktop) {
+    height: 400px;
+  }
+
+  &__category {
+    @extend %flex-center;
+    font-size: calcFluidFontSize(15, $font-M, 320, 1920);
+    @include color-and-weight($white, $regular);
+    @include size(120px, 30px);
+    opacity: .9;
+    background-color: $purple;
+  }
+}
+
+.img-experience-1 {
+  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/56558719_409228822990474_3644209115700957157_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=110&_nc_ohc=NNhp8Y6ChS8AX-J9iGa&oh=053b1f2b9cbe39abc501de4ec9352724&oe=5EB7695F");
+}
+
+.img-experience-2 {
+  background-image: url("https://scontent-arn2-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80644304_637018030384337_6567613158327309370_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105&_nc_ohc=_Si_ny3g-t0AX8jS8M8&oh=e0274f0f6559c47cc1a5a23c25abf19a&oe=5EC3FAB3");
+}
+
+.img-experience-3 {
+  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/81897907_982353628817748_7775538246734106595_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=100&_nc_ohc=wo7X49C_avEAX-NpeqU&oh=2bbe7d223a994b52fffc4eb44ad0b06c&oe=5EC7E37C");
+}
+
+.img-experience-4 {
+  background-image: url("https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/71922423_1180665852323298_4010668248192934104_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=106&_nc_ohc=UO7q2DV3wMUAX-86TuW&oh=3e4bf87600a408e3b6520df0b2481071&oe=5EB8D43A");
+}
+
+.title-box {
+  margin: 30px 0;
+  @include color-and-weight($black, $bold);
+  font-size: calcFluidFontSize(15, $font-M, 320, 1920);
+}
+
+.subtitle-box {
+  width: 100%;
+  @include color-and-weight($gray, $regular);
+  font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
+}
+
+
+.circle {
+  @include media(large-desktop) {
+    background-image: url(../../img/circle.png);
+  }
+  z-index: -3;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 567px;
+  height: 453px;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
 //.line-back {
 //  z-index: -7;
 //  left: 0;
@@ -304,150 +224,153 @@ html {
 //  background-repeat: no-repeat;
 //}
 //
-//.info-and-arrows {
-//  @extend %flex-between;
-//  width: 100%;
-//}
-//
-//.info-under-title {
-//  max-width: 700px;
-//  @include text($font-S, $regular, $gray);
-//  margin-bottom: 100px;
-//}
-//
-//
+
+.choose-caterory {
+  @include media(large-desktop) {
+    background-image: url(../../img/choose-category.jpg);
+  }
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0px;
+}
+
 //.info-clients {
 //  @include text($font-S, $regular, $gray);
 //  margin-bottom: 100px;
 //  width: 100%;
 //}
 //
-//.choose-caterory {
-//  background-image: url(../../img/choose-category.jpg);
-//  background-size: contain;
-//  background-repeat: no-repeat;
-//  background-position: 0 0px;
-//  padding-bottom: 100px;
-//}
-//
-//.name-category {
-//  @include text($font-S, $medium, $white);
-//  font-size: 19px;
-//  font-weight: 400;
-//  height: 40px;
-//  width: 150px;
-//  opacity: .9;
-//  background-color: $purple;
-//  color: white;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//}
-//
-//.img-category1 {
-//  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/73177683_886357455273492_3040981951662070318_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=100&_nc_ohc=L7t8gpVG3kAAX8DVieD&oh=adef4016ee8852583316c356ca41610f&oe=5ECB87FC");
-//}
-//
-//.img-category2 {
-//  background-image: url("https://i.pinimg.com/originals/bc/f2/24/bcf2247e1d2484a755820f6cfbf2a3f6.jpg");
-//}
-//
-//.img-category3 {
-//  background-image: url("https://www.paledivision.com/wp-content/uploads/2018/05/willabelle-ong-willamazing-blogger-fashion-travel-lifestyle-blog-top-singapore-instagram-spots-iceland-reykjavik-icelandic-mountain-photography-locations-gullfoss-waterfall-winter.jpg");
-//}
-//
-//.img-category4 {
-//  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80452230_2983987128280893_1866896929975156859_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=109&_nc_ohc=XLwWxHcsSpgAX9pAEOm&oh=0178393dd8ecff8f141d10e66cdd7395&oe=5EC7406E");
-//}
-//
-//.arrows {
-//  display: flex;
-//  width: 270px;
-//}
-//
-//.arrows-distance {
-//  @extend %flex-between;
-//  width: 110px;
-//}
-//
-//.arrow {
-//  cursor: pointer;
-//  transition: .3s;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  height: 40px;
-//  width: 40px;
-//  border: 3px solid $gray;
-//  color: #999999;
-//  font-size: 19px;
-//}
-//
-//.arrow:hover {
-//  transition: .3s;
-//  background-color: $purple;
-//  border: 3px solid $purple;
-//  color: white;
-//}
-//
-//.adventure-trip {
-//  padding-bottom: 100px;
-//  width: 100%;
-//  background-image: url(../../img/video-back.jpg);
-//  background-size: contain;
-//  background-repeat: no-repeat;
-//}
-//
-//.video-cover {
-//  margin-bottom: 130px;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  width: 100%;
-//  height: 700px;
-//  background-image: url("http://www.travelstart.co.ke/blog/wp-content/uploads/2017/12/48.jpg");
-//  background-size: cover;
-//}
-//
-//.blackout {
-//  @extend %flex-center;
-//  height: 100%;
-//  width: 100%;
-//  background-color: rgba(0, 0, 0, .4);
-//  transition: 1s;
-//}
-//
-//.blackout:hover {
-//  background-color: rgba(0, 0, 0, .1);
-//  transition: 1s;
-//}
-//
-//.circle-play {
-//  @extend %flex-center;
-//  height: 130px;
-//  width: 130px;
-//  border-radius: 50%;
-//  background: rgba(255, 255, 255, 0.6);
-//}
-//
-//.circle-play-two {
-//  cursor: pointer;
-//  transition: .3s;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  font-size: 25px;
-//  background-color: white;
-//  height: 90px;
-//  width: 90px;
-//  border-radius: 50%;
-//}
-//
-//.circle-play-two:hover {
-//  transition: .3s;
-//  height: 100px;
-//  width: 100px;
-//}
+
+
+.img-category1 {
+  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/73177683_886357455273492_3040981951662070318_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=100&_nc_ohc=L7t8gpVG3kAAX8DVieD&oh=adef4016ee8852583316c356ca41610f&oe=5ECB87FC");
+}
+
+.img-category2 {
+  background-image: url("https://i.pinimg.com/originals/bc/f2/24/bcf2247e1d2484a755820f6cfbf2a3f6.jpg");
+}
+
+.img-category3 {
+  background-image: url("https://www.paledivision.com/wp-content/uploads/2018/05/willabelle-ong-willamazing-blogger-fashion-travel-lifestyle-blog-top-singapore-instagram-spots-iceland-reykjavik-icelandic-mountain-photography-locations-gullfoss-waterfall-winter.jpg");
+}
+
+.img-category4 {
+  background-image: url("https://scontent-amt2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/80452230_2983987128280893_1866896929975156859_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=109&_nc_ohc=XLwWxHcsSpgAX9pAEOm&oh=0178393dd8ecff8f141d10e66cdd7395&oe=5EC7406E");
+}
+
+.up-content {
+  @extend %flex-between;
+  width: 100%;
+  flex-direction: column;
+
+  @include media(tablet) {
+    flex-direction: row;
+  }
+
+
+  &__arrows {
+    @extend %flex-between;
+    width: 100px;
+    margin-bottom: 30px;
+
+    &__arrow {
+      display: flex;
+      width: 270px;
+    }
+
+    &__arrow {
+      @extend %flex-center;
+      cursor: pointer;
+      transition: .3s;
+      height: 40px;
+      width: 40px;
+      border: 3px solid $gray;
+      color: #999999;
+      font-size: 19px;
+
+      &:hover {
+        border: 3px solid $purple;
+        background-color: $purple;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+.arrow:hover {
+  transition: .3s;
+  background-color: $purple;
+  border: 3px solid $purple;
+  color: white;
+}
+
+//---------------------------------------------------------------------------------------------
+
+.adventure-trip {
+  @include media(large-desktop) {
+    background-image: url(../../img/video-back.jpg);
+  }
+
+  padding-bottom: 100px;
+  width: 100%;
+  background-size: contain;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.video-cover {
+  margin-bottom: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  background-image: url("http://www.travelstart.co.ke/blog/wp-content/uploads/2017/12/48.jpg");
+  background-size: cover;
+}
+
+.blackout {
+  @extend %flex-center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  transition: 1s;
+}
+
+.blackout:hover {
+  background-color: rgba(0, 0, 0, .1);
+  transition: 1s;
+}
+
+.circle-play {
+  @extend %flex-center;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.circle-play-two {
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: white;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+.circle-play-two:hover {
+  transition: .3s;
+  height: 100px;
+  width: 100px;
+}
+
+//-------------------------------------------------------------------------
 //
 //.clients {
 //  width: 100%;

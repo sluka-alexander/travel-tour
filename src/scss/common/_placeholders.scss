@@ -12,3 +12,8 @@
   @extend %flex;
   justify-content: space-between;
 }
+%flex-around {
+  @extend %flex;
+  justify-content: space-around;
+
+}
