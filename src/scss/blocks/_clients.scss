@@ -1,0 +1,105 @@
+@import "../common/mixins";
+@import "../common/placeholders";
+@import "../common/color";
+@import "../common/functions";
+@import "../common/ properties-of-font";
+@import "../common/config";
+
+.awesome-clients {
+
+  width: 100%;
+
+  @include media(large-desktop){
+    background-image: url(../../img/circles.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__slider {
+    width: 100%;
+    align-items: center;
+
+    @extend %flex-between;
+
+    &__arrow {
+      transition: .3s;
+      cursor: pointer;
+      font-size: #{$font-M};
+      border-radius: 50%;
+      background-color: $purple;
+
+      @extend %flex-center;
+
+      @include size(40px);
+
+      &:hover {
+        @include size(50px);
+      }
+    }
+
+    &__client {
+      cursor: pointer;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+
+      &__small {
+        @include size(50px);
+        display: none;
+
+        @include media(tablet) {
+          display: block;
+        }
+      }
+
+      &__medium {
+        display: none;
+
+        @include media(small-tablet) {
+          display: block;
+        }
+        @include size(100px);
+      }
+
+      &__large {
+        @include size(200px);
+      }
+    }
+
+  }
+
+  &__info {
+    margin-bottom: 100px;
+    width: 100%;
+
+    &__name {
+      font-size: calcFluidFontSize($font-M, $font-L, 320, 1920);
+      margin: 30px 0;
+
+      @include color-and-weight($black, $bold);
+
+      @extend %flex-center;
+
+    }
+
+    &__review {
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
+      margin: 0 auto;
+
+      @include color-and-weight($gray, $regular);
+    }
+  }
+
+}
+
+@for $i from 1 through 5 {
+  .img-clients-#{$i} {
+    background-image: url("../../img/clients/#{$i}.jpeg");
+  }
+}

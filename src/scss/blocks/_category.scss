@@ -1,0 +1,64 @@
+@import "../common/mixins";
+@import "../common/placeholders";
+@import "../common/color";
+@import "../common/functions";
+@import "../common/ properties-of-font";
+@import "../common/config";
+
+.choose-caterory {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0px;
+
+  @include media(large-desktop) {
+    background-image: url(../../img/choose-category.jpg);
+  }
+}
+
+
+@for $i from 1 through 4 {
+  .img-category-#{$i} {
+    background-image: url("../../img/category/#{$i}.jpg");
+  }
+}
+
+.up-content {
+  width: 100%;
+  flex-direction: column;
+
+  @include media(tablet) {
+    flex-direction: row;
+  }
+
+  @extend %flex-between;
+
+  &__arrows {
+    width: 100px;
+    margin-bottom: 30px;
+
+    @extend %flex-between;
+    &__arrow {
+      display: flex;
+      width: 270px;
+
+    }
+
+    &__arrow {
+      cursor: pointer;
+      transition: .3s;
+      border: 3px solid $gray;
+      color: #999999;
+      font-size: 19px;
+
+      @include size(40px);
+
+      @extend %flex-center;
+
+      &:hover {
+        border: 3px solid $purple;
+        background-color: $purple;
+        color: $white;
+      }
+    }
+  }
+}

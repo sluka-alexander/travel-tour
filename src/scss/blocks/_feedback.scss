@@ -1,0 +1,72 @@
+@import "../common/mixins";
+@import "../common/placeholders";
+@import "../common/color";
+@import "../common/functions";
+@import "../common/ properties-of-font";
+@import "../common/config";
+
+
+.feedback {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("http://cita.com.ua/img/ntours/big/4/1049071809.jpg");
+
+  &__color-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(67, 58, 139, 0.7);
+  }
+}
+
+.email {
+  width: 100%;
+  background-color: $white;
+  border-radius: 50px;
+  padding: 10px;
+  margin-bottom: 50px;
+
+  @extend %flex-between;
+
+  &__input {
+    width: 100%;
+    padding-left: 20px;
+    border-radius: 50px;
+    font-size: calcFluidFontSize(14, $font-M, 320, 1920);
+
+    @include color-and-weight($black, $regular);
+  }
+
+  &__button {
+    font-size: calcFluidFontSize(14, $font-M, 320, 1920);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: $purple;
+    transition: .3s;
+
+    @include size(200px, 60px);
+    @include color-and-weight($white, $medium);
+
+    @extend %flex-center;
+
+    &:hover {
+      transition: .3s;
+      background-color: $pink;
+    }
+  }
+
+}
+
+.text-end {
+  font-size: calcFluidFontSize(14, $font-XL, 320, 1920);
+
+  @include color-and-weight($white, $extra-bold);
+}

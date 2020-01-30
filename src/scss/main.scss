@@ -4,7 +4,15 @@
 @import "common/functions";
 @import "common/ properties-of-font";
 @import "common/config";
+
 @import "blocks/starting-section";
+@import "blocks/experience";
+@import "blocks/category";
+@import "blocks/adventure";
+@import "blocks/clients";
+@import "blocks/feedback";
+@import "blocks/footer";
+
 
 *, *:after, *:before {
   margin: 0;
@@ -15,7 +23,6 @@
 html {
   font-family: 'Montserrat', sans-serif;
   background-color: $background;
-  outline: 0;
 }
 
 input {
@@ -30,9 +37,11 @@ input {
   margin: 0 auto;
   max-width: 300px;
   min-width: 300px;
+  text-align: center;
 
   @include media(mobile) {
     max-width: 360px;
+    text-align: start;
 
   }
   @include media(small-tablet) {
@@ -59,17 +68,19 @@ input {
 }
 
 .subtitle {
-  @include color-and-weight($gray, $regular);
+  text-align: center;
   font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
   margin-bottom: 30px;
   max-width: 600px;
+
+  @include color-and-weight($gray, $regular);
+  @include media(mobile) {
+    text-align: start;
+  }
 }
 
 
 .main-img {
-  @include media(large-desktop) {
-    background-image: url("https://i.ibb.co/zby7Kps/main.jpg");
-  }
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
@@ -78,119 +89,15 @@ input {
   right: 0;
   top: 0;
   z-index: -6;
-}
-
-
-.experience {
-
-  width: 100%;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-bottom: 50px;
 
   @include media(large-desktop) {
-    background-image: url(../../img/experience-travel-back.jpg);
-  }
-}
-
-.boxes {
-  @extend %flex-between;
-  //flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-
-  @include media(mobile) {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  @include media(mini-tablet) {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  @include media(large-desktop) {
-    justify-content: space-between;
-  }
-}
-
-.experience__column {
-  margin-bottom: 40px;
-  width: 100%;
-  @include media(mobile) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-
-  }
-  @include media(small-tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 270px;
-  }
-  @include media(tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 170px;
-  }
-  @include media(desktop) {
-    width: 180px;
-  }
-  @include media(large-desktop) {
-    width: 270px;
+    background-image: url("https://i.ibb.co/zby7Kps/main.jpg");
   }
 
-}
-
-.box {
-  @extend %flex;
-  justify-content: flex-end;
-  height: 400px;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  @include media(tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 250px;
-  }
-  @include media(large-desktop) {
-    height: 400px;
-  }
-
-  &__category {
-    @extend %flex-center;
-    font-size: calcFluidFontSize(15, $font-M, 320, 1920);
-    @include color-and-weight($white, $regular);
-    @include size(120px, 30px);
-    opacity: .9;
-    background-color: $purple;
-  }
-}
-
-@for $i from 1 through 4 {
-  .img-experience-#{$i} {
-    background-image: url("../../img/experience/#{$i}.jpg");
-  }
-}
-
-.title-box {
-  margin: 30px 0;
-  @include color-and-weight($black, $bold);
-  font-size: calcFluidFontSize(15, $font-M, 320, 1920);
-}
-
-.subtitle-box {
-  width: 100%;
-  @include color-and-weight($gray, $regular);
-  font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
 }
 
 
 .circle {
-  @include media(large-desktop) {
-    background-image: url(../../img/circle.png);
-  }
   z-index: -3;
   left: 0;
   top: 0;
@@ -199,467 +106,23 @@ input {
   height: 453px;
   background-size: auto;
   background-repeat: no-repeat;
+
+  @include media(large-desktop) {
+    background-image: url(../../img/circle.png);
+  }
 }
 
-//.line-back {
-//  z-index: -7;
-//  left: 0;
-//  top: 0;
-//  position: absolute;
-//  width: 100%;
-//  height: 957px;
-//  background-image: url(../../img/line-back.png);
-//  background-size: contain;
-//  background-repeat: no-repeat;
-//}
-//
-
-.choose-caterory {
-  @include media(large-desktop) {
-    background-image: url(../../img/choose-category.jpg);
-  }
+.line-back {
+  z-index: -7;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 957px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0 0px;
-}
 
-
-@for $i from 1 through 4 {
-  .img-category-#{$i} {
-    background-image: url("../../img/category/#{$i}.jpg");
-  }
-}
-
-.up-content {
-  @extend %flex-between;
-  width: 100%;
-  flex-direction: column;
-
-  @include media(tablet) {
-    flex-direction: row;
-  }
-
-
-  &__arrows {
-    @extend %flex-between;
-    width: 100px;
-    margin-bottom: 30px;
-
-    &__arrow {
-      display: flex;
-      width: 270px;
-
-    }
-
-    &__arrow {
-      @extend %flex-center;
-
-      @include size(40px);
-
-      cursor: pointer;
-      transition: .3s;
-      border: 3px solid $gray;
-      color: #999999;
-      font-size: 19px;
-
-      &:hover {
-        border: 3px solid $purple;
-        background-color: $purple;
-        color: $white;
-      }
-    }
-  }
-}
-
-
-.arrow:hover {
-  transition: .3s;
-  background-color: $purple;
-  border: 3px solid $purple;
-  color: white;
-}
-
-//---------------------------------------------------------------------------------------------
-
-.adventure-trip {
   @include media(large-desktop) {
-    background-image: url(../../img/video-back.jpg);
-  }
-  padding-bottom: 100px;
-  width: 100%;
-  background-size: contain;
-  position: relative;
-  background-repeat: no-repeat;
-}
-
-.video-cover {
-  @extend %flex-center;
-  width: 100%;
-  height: 45vw;
-  background-image: url("http://www.travelstart.co.ke/blog/wp-content/uploads/2017/12/48.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.blackout {
-  @extend %flex-center;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .4);
-  transition: 1s;
-}
-
-.blackout:hover {
-  background-color: rgba(0, 0, 0, .1);
-  transition: 1s;
-}
-
-.circle-play {
-  @extend %flex-center;
-  height: 130px;
-  width: 130px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.circle-play-two {
-  cursor: pointer;
-  transition: .3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  background-color: white;
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-}
-
-.circle-play-two:hover {
-  transition: .3s;
-  height: 100px;
-  width: 100px;
-}
-
-//-------------------------------------------------------------------------
-
-.awesome-clients {
-  width: 100%;
-  background-image: url(../../img/circles.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  &__slider {
-    width: 100%;
-    align-items: center;
-
-    @extend %flex-between;
-
-    &__arrow {
-      @extend %flex-center;
-      @include size(40px);
-
-      transition: .3s;
-      cursor: pointer;
-      font-size: #{$font-M};
-
-      border-radius: 50%;
-      background-color: $purple;
-
-      &:hover {
-        @include size(50px);
-      }
-    }
-
-    &__client {
-      cursor: pointer;
-      border-radius: 50%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-
-
-      &__small {
-        @include size(50px);
-        display: none;
-
-        @include media(tablet) {
-          display: block;
-        }
-      }
-
-      &__medium {
-        display: none;
-
-        @include media(small-tablet) {
-          display: block;
-        }
-        @include size(100px);
-      }
-
-      &__large {
-        @include size(200px);
-      }
-    }
-
-  }
-
-  &__info {
-    margin-bottom: 100px;
-    width: 100%;
-
-    &__name {
-      @extend %flex-center;
-      @include color-and-weight($black, $bold);
-      font-size: calcFluidFontSize($font-M, $font-L, 320, 1920);
-      margin: 30px 0;
-    }
-
-    &__review {
-      @include color-and-weight($gray, $regular);
-
-      text-align: center;
-      max-width: 400px;
-      width: 100%;
-      font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
-      margin: 0 auto;
-    }
-  }
-
-}
-
-@for $i from 1 through 5 {
-  .img-clients-#{$i} {
-    background-image: url("../../img/clients/#{$i}.jpeg");
+    background-image: url(../../img/line-back.png);
   }
 }
-
-
-.feedback {
-  width: 100%;
-  height: 300px;
-  margin-bottom: 100px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("http://cita.com.ua/img/ntours/big/4/1049071809.jpg");
-
-  &__color-back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background: rgba(67, 58, 139, 0.7);
-  }
-}
-
-.email {
-  @extend %flex-between;
-  width: 100%;
-  background-color: $white;
-  border-radius: 50px;
-  padding: 10px;
-  margin-bottom: 50px;
-
-  &__input {
-    @include color-and-weight($black, $regular);
-    width: 100%;
-    padding-left: 20px;
-    border-radius: 50px;
-    font-size: calcFluidFontSize(14, $font-M, 320, 1920);
-  }
-
-  &__button {
-    @include size(200px, 60px);
-    @include color-and-weight($white, $medium);
-    @extend %flex-center;
-
-    font-size: calcFluidFontSize(14, $font-M, 320, 1920);
-    color: white;
-    font-weight: 500;
-
-    cursor: pointer;
-    border-radius: 50px;
-    background-color: $purple;
-    transition: .3s;
-
-    &:hover {
-      transition: .3s;
-      background-color: $pink;
-    }
-  }
-
-}
-
-.text-end {
-  @include color-and-weight($white, $extra-bold);
-  font-size: calcFluidFontSize(14, $font-XL, 320, 1920);
-}
-
-//---------------------------------------------------
-
-.footer {
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  @include media(large-desktop) {
-    background-image: url('../../img/footer-back.png');
-  }
-}
-
-.content {
-  @extend %flex-between;
-  flex-direction: column;
-
-  @include media(desktop) {
-    flex-direction: row;
-  }
-
-  &__left {
-    width: 40%;
-    margin-bottom: 40px;
-
-    &__logo {
-      cursor: pointer;
-      @include color-and-weight($purple, $extra-bold);
-      font-size: calcFluidFontSize($font-logo, $font-logo, 320, 1920);
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-    }
-
-    &__icons {
-      @include color-and-weight($purple, $extra-bold);
-
-      font-size: calcFluidFontSize(20, $font-L, 320, 1920);
-
-      &__icon {
-        transition: .3s;
-        cursor: pointer;
-
-        &:hover {
-          @include color-and-weight($pink, $extra-bold);
-        }
-      }
-    }
-  }
-
-  &__right {
-    @extend %flex-between;
-    flex-direction: column;
-    @include media(mobile) {
-      flex-direction: row;
-    }
-    @include media(desktop) {
-      width: 40%;
-    }
-
-    width: 100%;
-
-    &__column {
-      &__title {
-        margin-bottom: 10px;
-        @include color-and-weight($black, $bold);
-        font-size: calcFluidFontSize($font-M, $font-L, 320, 1920);
-      }
-
-      &__items {
-        @include color-and-weight($gray, $regular);
-        font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
-
-        &__item {
-          transition: .3s;
-          cursor: pointer;
-
-          &:hover {
-            @include color-and-weight($purple, $regular);
-          }
-        }
-      }
-    }
-  }
-}
-
-
-//.icon-social {
-//  display: flex;
-//  @extend %flex-between;
-//  font-size: 22px;
-//  width: 200px;
-//  margin-bottom: 50px;
-//}
-//
-//.icon {
-//  transition: .3s;
-//  cursor: pointer;
-//}
-//
-//.icon:hover {
-//  font-size: 27px;
-//  transition: .3s;
-//  color: $pink;
-//  cursor: pointer;
-//}
-//
-//.left-and-right-path {
-//  padding-top: 100px;
-//  @extend %flex-between;
-//}
-//
-//.right-path-footer {
-//  width: 500px;
-//  @extend %flex-between;
-//}
-//
-.made {
-  @extend %flex-center;
-  font-size: calcFluidFontSize(14, $font-M, 320, 1920);
-  @include color-and-weight($black, $bold);
-
-  width: 100%;
-  height: 95px;
-  border-top: 1px solid #E3E3E3;
-}
-
-//
-//.column {
-//  margin-left: 10px;
-//}
-//
-//.heart {
-//  padding: 0 3px;
-//  color: $red;
-//}
-//
-//.title-footer-right {
-//  @include text($font-M, $bold);
-//  margin-bottom: 30px;
-//}
-//
-//.items-footer-right {
-//  font-size: 14px;
-//  font-weight: 500;
-//  color: $gray;
-//}
-//
-
-//
-//.item-line:hover {
-//  transition: .5s;
-//  width: 100%;
-//}
-//
-//.item-footer {
-//  cursor: pointer;
-//  transition: .3s;
-//}
-//
-//.item-footer:hover {
-//  transition: .3s;
-//  color: $purple;
-//}
-//
