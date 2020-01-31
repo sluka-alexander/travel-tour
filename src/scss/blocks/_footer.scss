@@ -1,9 +1,8 @@
 @import "../common/mixins";
 @import "../common/placeholders";
-@import "../common/color";
 @import "../common/functions";
-@import "../common/ properties-of-font";
 @import "../common/config";
+@import "../common/variables";
 
 .footer {
   width: 100%;
@@ -13,18 +12,18 @@
   padding-top: 100px;
 
   @include media(large-desktop) {
-    background-image: url('../../img/footer-back.png');
+    background-image: url('../../#{$img}footer-back.png');
   }
 }
 
 .content {
+  @extend %flex-between;
+
   flex-direction: column;
 
   @include media(desktop) {
     flex-direction: row;
   }
-
-  @extend %flex-between;
 
   &__left {
     width: 100%;
@@ -34,26 +33,28 @@
       width: 40%;
     }
     &__logo {
-      @include color-and-weight($purple, $extra-bold);
-      @include media(mobile) {
-        justify-content: flex-start;
-
-      }
-
       @extend %flex-center;
+
+      @include color-and-weight($purple, $extra-bold);
 
       cursor: pointer;
       font-size: calcFluidFontSize($font-logo, $font-logo, 320, 1920);
       display: flex;
       align-items: center;
       text-transform: uppercase;
+
+      @include media(mobile) {
+        justify-content: flex-start;
+
+      }
     }
 
     &__icons {
+      @include color-and-weight($purple, $regular);
+
       text-align: center ;
       font-size: calcFluidFontSize($font-M, $font-M, 320, 1920);
 
-      @include color-and-weight($purple, $regular);
       @include media(mobile){
         text-align: start ;
       }
@@ -70,6 +71,7 @@
   }
 
   &__right {
+    @extend %flex-between;
 
     flex-direction: column;
     width: 100%;
@@ -81,8 +83,6 @@
       width: 40%;
     }
 
-    @extend %flex-between;
-
     &__column {
       text-align: center;
 
@@ -91,16 +91,16 @@
       }
 
       &__title {
+        @include color-and-weight($black, $medium);
+
         margin-bottom: 10px;
         font-size: calcFluidFontSize($font-M, $font-M, 320, 1920);
-
-        @include color-and-weight($black, $medium);
       }
 
       &__items {
-        font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
-
         @include color-and-weight($gray, $regular);
+
+        font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
 
         &__item {
           transition: .3s;
@@ -116,13 +116,13 @@
 }
 
 .made {
+  @extend %flex-center;
+
+  @include color-and-weight($black, $bold);
+
   font-size: calcFluidFontSize(14, $font-M, 320, 1920);
   text-align: center;
   width: 100%;
   height: 95px;
   border-top: 1px solid #E3E3E3;
-
-  @include color-and-weight($black, $bold);
-
-  @extend %flex-center;
 }

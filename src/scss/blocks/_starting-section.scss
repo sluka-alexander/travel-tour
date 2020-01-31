@@ -1,18 +1,20 @@
 @import "../common/mixins";
 @import "../common/placeholders";
-@import "../common/color";
+@import "../common/variables";
 @import "../common/functions";
-@import "../common/ properties-of-font";
 @import "../common/config";
 
 
 header {
+  @extend %flex-between;
+
+  @include color-and-weight($gray, $medium);
+
   font-size: calcFluidFontSize(14, $font-M, 320, 1920);
   margin-top: 60px;
   flex-wrap: wrap;
   flex-direction: column;
 
-  @include color-and-weight($gray, $medium);
   @include media(tablet) {
     flex-wrap: nowrap;
     flex-direction: row;
@@ -21,25 +23,28 @@ header {
     flex-wrap: nowrap;
     flex-direction: row;
   }
-
-  @extend %flex-between;
 }
 
 .logo {
+  @include color-and-weight($purple, $extra-bold);
+
+  @extend %flex-center;
+
   cursor: pointer;
   font-size: calcFluidFontSize($font-logo, $font-logo, 320, 1920);
   text-transform: uppercase;
 
-  @include color-and-weight($purple, $extra-bold);
   @include media(mobile) {
     justify-content: flex-start;
   }
-
-  @extend %flex-center;
-
 }
 
 .navbar {
+  @extend %flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
+
   @include media(mobile) {
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -56,23 +61,18 @@ header {
     justify-content: space-around;
   }
 
-  @extend %flex;
-  flex-direction: column;
-  margin: 20px 0px;
-  width: 100%;
-
   &__item {
     cursor: pointer;
     transition: .3s;
 
     &::after {
+      @include size(20px, 3px);
+
       content: '';
       display: block;
       border-radius: 50px;
       transition: .5s;
       background-color: $purple;
-
-      @include size(20px, 3px);
     }
 
     &:hover::after {
@@ -83,13 +83,18 @@ header {
 }
 
 .contact-us {
-  cursor: pointer;
-  background-color: $white;
-  transition: .3s;
+  @extend %flex-center;
 
   @include size(200px, 50px);
 
-  @extend %flex-center;
+  cursor: pointer;
+  background-color: $white;
+  transition: .3s;
+  margin: 0 auto;
+
+  @include media(mobile){
+    margin: 0 0;
+  }
 
   &:hover {
     transition: .3s;
@@ -98,65 +103,64 @@ header {
 }
 
 .main-info {
-  margin-top: 100px;
+  margin-top: 50px;
 
   @include media(tablet) {
+    margin-top: 200px;
   }
   @include media(large-desktop) {
     margin-top: 360px;
   }
 
   &__title {
-    font-size: calcFluidFontSize(25, $font-XL, 320, 1920);
-
     @include color-and-weight($black, $extra-bold);
 
+    font-size: calcFluidFontSize(25, $font-XL, 320, 1920);
   }
 
   &__subtitle {
-    font-size: calcFluidFontSize(15, $font-L, 320, 1920);
-
     @include color-and-weight($gray, bold);
-
+    font-size: calcFluidFontSize(15, $font-L, 320, 1920);
   }
 }
 
 .search {
-  margin-top: 150px;
+  margin: 50px 0;
   width: 100%;
   max-width: 650px;
-  margin-bottom: 200px;
 
   @include media(small-tablet) {
     display: flex;
   }
+  @include media(tablet) {
+    margin: 150px 0;
+  }
 
   &__input {
+    @extend %flex-center;
+
+    @include size(100%,70px);
+    @include color-and-weight($black, $regular);
+
     font-size: calcFluidFontSize(14, $font-M, 320, 1920);
-    width: 100%;
-    height: 70px;
     background-color: $white;
     transition: .3s;
     padding-left: 20px;
     margin-bottom: 20px;
-
-    @include color-and-weight($black, $regular);
-
-    @extend %flex-center;
   }
 
   &__button {
+    @extend %flex-center;
+
+    @include color-and-weight($white, $medium);
+    @include size(200px, 70px);
+
     cursor: pointer;
     transition: .3s;
     font-size: calcFluidFontSize(14, $font-M, 320, 1920);
     margin: 0 auto;
     background-color: $purple;
     color: $white;
-
-    @extend %flex-center;
-
-    @include color-and-weight($white, $medium);
-    @include size(200px, 70px);
 
     &:hover {
       transition: .3s;

@@ -1,14 +1,13 @@
 @import "common/mixins";
 @import "common/placeholders";
-@import "common/color";
+@import "common/variables";
 @import "common/functions";
-@import "common/ properties-of-font";
 @import "common/config";
 
 @import "blocks/starting-section";
 @import "blocks/experience";
 @import "blocks/category";
-@import "blocks/adventure";
+@import "blocks/trip";
 @import "blocks/clients";
 @import "blocks/feedback";
 @import "blocks/footer";
@@ -63,29 +62,30 @@ input {
 
 .title {
   @include color-and-weight($purple, $extra-bold);
+
   font-size: calcFluidFontSize(25, $font-XL, 320, 1920);
   margin: 30px 0;
 }
 
 .subtitle {
+  @include color-and-weight($gray, $regular);
+
   text-align: center;
   font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
   margin-bottom: 30px;
   max-width: 600px;
 
-  @include color-and-weight($gray, $regular);
   @include media(mobile) {
     text-align: start;
   }
 }
 
-
 .main-img {
+  @include size(44vw,1080px);
+
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 1080px;
-  width: 44vw;
   right: 0;
   top: 0;
   z-index: -6;
@@ -93,32 +93,31 @@ input {
   @include media(large-desktop) {
     background-image: url("https://i.ibb.co/zby7Kps/main.jpg");
   }
-
 }
 
 
 .circle {
+  @include size(100%,453px);
+
   z-index: -3;
   left: 0;
   top: 0;
   position: absolute;
-  width: 100%;
-  height: 453px;
   background-size: auto;
   background-repeat: no-repeat;
 
   @include media(large-desktop) {
-    background-image: url(../../img/circle.png);
+    background-image: url('../../#{$img}circle.png');
   }
 }
 
 .line-back {
+  @include size(100%,957px);
+
   z-index: -7;
   left: 0;
   top: 0;
   position: absolute;
-  width: 100%;
-  height: 957px;
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -126,3 +125,4 @@ input {
     background-image: url(../../img/line-back.png);
   }
 }
+
