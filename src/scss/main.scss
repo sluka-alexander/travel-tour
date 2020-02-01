@@ -84,11 +84,11 @@ input {
   @include size(44vw,1080px);
 
   position: absolute;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   right: 0;
   top: 0;
-  z-index: -6;
+  z-index: 0;
 
   @include media(large-desktop) {
     background-image: url("https://i.ibb.co/zby7Kps/main.jpg");

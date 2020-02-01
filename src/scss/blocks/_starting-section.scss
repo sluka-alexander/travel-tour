@@ -41,9 +41,11 @@ header {
 
 .navbar {
   @extend %flex;
+
   flex-direction: column;
   margin: 20px 0;
   width: 100%;
+  z-index: 1;
 
   @include media(mobile) {
     justify-content: space-between;
@@ -88,6 +90,7 @@ header {
   @include size(200px, 50px);
 
   cursor: pointer;
+  z-index: 1;
   background-color: $white;
   transition: .3s;
   margin: 0 auto;
