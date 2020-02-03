@@ -1,0 +1,66 @@
+@import "../common/mixins";
+@import "../common/placeholders";
+@import "../common/functions";
+@import "../common/config";
+@import "../common/variables";
+
+.adventure-trip{
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include media(large-desktop){
+    background-image: url('#{$img}video-back.jpg');
+  }
+}
+
+.video-block {
+  background-image: url('#{$img}island.jpg');
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  padding: 30% 0;
+
+  &__blackout {
+    @extend %flex-center;
+
+    @include size(100%);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    transition: .3s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &__circle {
+      @extend %flex-center;
+
+      @include size(100px);
+
+      background: rgba(255, 255, 255, .5);
+      border-radius: 50px;
+
+      &__second {
+        @extend %flex-center;
+
+        @include size(80px);
+
+        transition: .3s;
+        font-size: calcFluidFontSize(17, $font-M, 320, 1920);
+        background-color: $white;
+        color: white;
+        border-radius: 50px;
+        cursor: pointer;
+        border: 1px dashed $purple;
+
+        &:hover {
+        transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}

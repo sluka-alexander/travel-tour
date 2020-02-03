@@ -1,0 +1,128 @@
+@import "../common/mixins";
+@import "../common/placeholders";
+@import "../common/functions";
+@import "../common/config";
+@import "../common/variables";
+
+.footer {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 100px;
+
+  @include media(large-desktop) {
+    background-image: url('#{$img}footer-back.png');
+  }
+}
+
+.content {
+  @extend %flex-between;
+
+  flex-direction: column;
+
+  @include media(desktop) {
+    flex-direction: row;
+  }
+
+  &__left {
+    width: 100%;
+    margin-bottom: 40px;
+
+    @include media(desktop) {
+      width: 40%;
+    }
+    &__logo {
+      @extend %flex-center;
+
+      @include color-and-weight($purple, $extra-bold);
+
+      cursor: pointer;
+      font-size: calcFluidFontSize($font-logo, $font-logo, 320, 1920);
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+
+      @include media(mobile) {
+        justify-content: flex-start;
+
+      }
+    }
+
+    &__icons {
+      @include color-and-weight($purple, $regular);
+
+      text-align: center ;
+      font-size: calcFluidFontSize($font-M, $font-M, 320, 1920);
+
+      @include media(mobile){
+        text-align: start ;
+      }
+
+      &__icon {
+        margin-right: 10px;
+        transition: .3s;
+        cursor: pointer;
+        &:hover {
+          @include color-and-weight($pink, $regular);
+        }
+      }
+    }
+  }
+
+  &__right {
+    @extend %flex-between;
+
+    flex-direction: column;
+    width: 100%;
+
+    @include media(mobile) {
+      flex-direction: row;
+    }
+    @include media(desktop) {
+      width: 40%;
+    }
+
+    &__column {
+      text-align: center;
+
+      @include media(mobile) {
+        text-align: start;
+      }
+
+      &__title {
+        @include color-and-weight($black, $medium);
+
+        margin-bottom: 10px;
+        font-size: calcFluidFontSize($font-M, $font-M, 320, 1920);
+      }
+
+      &__items {
+        @include color-and-weight($gray, $regular);
+
+        font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
+
+        &__item {
+          transition: .3s;
+          cursor: pointer;
+
+          &:hover {
+            @include color-and-weight($purple, $regular);
+          }
+        }
+      }
+    }
+  }
+}
+
+.made {
+  @extend %flex-center;
+
+  @include color-and-weight($black, $bold);
+
+  font-size: calcFluidFontSize(14, $font-M, 320, 1920);
+  text-align: center;
+  width: 100%;
+  height: 95px;
+  border-top: 1px solid #E3E3E3;
+}
