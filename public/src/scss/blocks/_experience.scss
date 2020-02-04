@@ -55,7 +55,7 @@
     flex-wrap: wrap;
     flex-direction: row;
   }
-  @include media(mini-tablet) {
+  @include media(small-tablet) {
     flex-wrap: wrap;
     flex-direction: row;
   }

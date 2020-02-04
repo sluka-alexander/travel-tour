@@ -12,6 +12,8 @@
 @import "blocks/feedback";
 @import "blocks/footer";
 
+@import "blocks/tours";
+
 
 *, *:after, *:before {
   margin: 0;
@@ -107,7 +109,7 @@ input {
   background-repeat: no-repeat;
 
   @include media(large-desktop) {
-    background-image: url('../../#{$img}circle.png');
+    background-image: url('#{$img}circle.png');
   }
 }
 
@@ -122,7 +124,6 @@ input {
   background-repeat: no-repeat;
 
   @include media(large-desktop) {
-    background-image: url(../../img/line-back.png);
+    background-image: url('#{$img}line-back.png');
   }
 }
-
