@@ -1,25 +1,26 @@
 const card = tour => {
-    return `<div class="box-tour">
-        <div class="box-tour__img">
-            <div class="box-tour__img__delete">
-                <i class="fas fa-trash-alt delete"></i>
+    return ` <div class="tour-item" id="tours">
+            <div class="tour-item__item tour-item__item__category">
+                <div class="item-name">Category</div>
+                <div>${tour.category}</div>
             </div>
-        </div>
-        <div class="box-tour__info">
-            <div class="box-tour__info__title"><${title}></div>
-            <div class="box-tour__info__desc">${desc}
+            <div class="tour-item__item tour-item__item__country">
+                <div class="item-name">Country</div>
+                <div>${tour.country}</div>
             </div>
-            <div class="box-tour__info__place">Place:
-                <div class="bold">${place}</div>
+            <div class="tour-item__item tour-item__item__desc">
+                <div class="item-name">Description</div>
+                <div>${tour.desc}</div>
             </div>
-            <div class="box-tour__info__seats">Seats:
-                <div class="bold">${seats}</div>
+            <div class="tour-item__item tour-item__item__price">
+                <div class="item-name">Price</div>
+                <div>${tour.price}</div>
             </div>
-            <div class="box-tour__info__price">Price:
-                <div class="bold">${price}$</div>
+            <div class="tour-item__item tour-item__item__date">
+                <div class="item-name">Date</div>
+                <div>${tour.date}</div>
             </div>
-        </div>
-    </div>`
+        </div>`
 };
 let tours = [];
 

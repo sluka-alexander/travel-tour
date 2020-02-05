@@ -1,4 +1,4 @@
-.box-tour__info__price, .box-tour__info__seats, .box-tour__info__place, .box-tour__img, .up-content, .box, .navbar, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .boxes, header, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us, .logo {
+.tour-item, .up-content, .box, .navbar, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .boxes, header, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us, .logo {
   display: flex;
 }
 
@@ -11,7 +11,7 @@
   justify-content: space-between;
 }
 
-.box-tour__info__price, .box-tour__info__seats, .box-tour__info__place, .box-tour__img, .up-content, .box, .navbar, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us, .logo, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .boxes, header {
+.tour-item, .up-content, .box, .navbar, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .up-content__arrows__arrow, .box__category, .search__button, .search__input, .contact-us, .logo, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .boxes, header {
   display: flex;
 }
 
@@ -191,7 +191,7 @@ header {
   background-color: #FE6091;
 }
 
-.box-tour__info__price, .box-tour__info__seats, .box-tour__info__place, .box-tour__img, .up-content, .box, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .up-content__arrows__arrow, .box__category, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .boxes, header, .logo, .navbar, .contact-us, .search__input, .search__button {
+.tour-item, .up-content, .box, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .up-content__arrows__arrow, .box__category, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, .boxes, header, .logo, .navbar, .contact-us, .search__input, .search__button {
   display: flex;
 }
 
@@ -334,7 +334,7 @@ header {
   font-size: calc( 0 * 100vw + 14px );
 }
 
-.box-tour__info__price, .box-tour__info__seats, .box-tour__info__place, .box-tour__img, .up-content, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .up-content__arrows__arrow, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category {
+.tour-item, .up-content, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .up-content__arrows__arrow, .content__right, .content, .email, .awesome-clients__slider, .up-content__arrows, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category {
   display: flex;
 }
 
@@ -409,7 +409,7 @@ header {
   color: #FFFFFF;
 }
 
-.box-tour__info__price, .box-tour__info__seats, .box-tour__info__place, .box-tour__img, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .content__right, .content, .email, .awesome-clients__slider, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow {
+.tour-item, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .video-block__blackout__circle__second, .video-block__blackout__circle, .video-block__blackout, .content__right, .content, .email, .awesome-clients__slider, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow {
   display: flex;
 }
 
@@ -473,7 +473,7 @@ header {
   transform: rotate(360deg);
 }
 
-.box-tour__info__price, .box-tour__info__seats, .box-tour__info__place, .box-tour__img, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .content__right, .content, .email, .awesome-clients__slider, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow, .video-block__blackout, .video-block__blackout__circle, .video-block__blackout__circle__second {
+.tour-item, .made, .content__left__logo, .email__button, .feedback__color-back, .awesome-clients__info__name, .awesome-clients__slider__arrow, .content__right, .content, .email, .awesome-clients__slider, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow, .video-block__blackout, .video-block__blackout__circle, .video-block__blackout__circle__second {
   display: flex;
 }
 
@@ -586,7 +586,7 @@ header {
   background-image: url("../../img/clients/5.jpeg");
 }
 
-.box-tour__info__price, .box-tour__info__seats, .box-tour__info__place, .box-tour__img, .made, .content__left__logo, .email__button, .feedback__color-back, .content__right, .content, .email, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow, .video-block__blackout, .video-block__blackout__circle, .video-block__blackout__circle__second, .awesome-clients__slider, .awesome-clients__slider__arrow, .awesome-clients__info__name {
+.tour-item, .made, .content__left__logo, .email__button, .feedback__color-back, .content__right, .content, .email, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow, .video-block__blackout, .video-block__blackout__circle, .video-block__blackout__circle__second, .awesome-clients__slider, .awesome-clients__slider__arrow, .awesome-clients__info__name {
   display: flex;
 }
 
@@ -651,7 +651,7 @@ header {
   font-size: calc( 0.0225 * 100vw + 6.8px );
 }
 
-.box-tour__info__price, .box-tour__info__seats, .box-tour__info__place, .box-tour__img, .made, .content__left__logo, .content__right, .content, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow, .video-block__blackout, .video-block__blackout__circle, .video-block__blackout__circle__second, .awesome-clients__slider, .awesome-clients__slider__arrow, .awesome-clients__info__name, .feedback__color-back, .email, .email__button {
+.tour-item, .made, .content__left__logo, .content__right, .content, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow, .video-block__blackout, .video-block__blackout__circle, .video-block__blackout__circle__second, .awesome-clients__slider, .awesome-clients__slider__arrow, .awesome-clients__info__name, .feedback__color-back, .email, .email__button {
   display: flex;
 }
 
@@ -780,7 +780,7 @@ header {
   border-top: 1px solid #E3E3E3;
 }
 
-.box-tour__info__price, .box-tour__info__seats, .box-tour__info__place, .box-tour__img, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow, .video-block__blackout, .video-block__blackout__circle, .video-block__blackout__circle__second, .awesome-clients__slider, .awesome-clients__slider__arrow, .awesome-clients__info__name, .feedback__color-back, .email, .email__button, .content, .content__left__logo, .content__right, .made {
+.tour-item, header, .logo, .navbar, .contact-us, .search__input, .search__button, .boxes, .box, .box__category, .up-content, .up-content__arrows, .up-content__arrows__arrow, .video-block__blackout, .video-block__blackout__circle, .video-block__blackout__circle__second, .awesome-clients__slider, .awesome-clients__slider__arrow, .awesome-clients__info__name, .feedback__color-back, .email, .email__button, .content, .content__left__logo, .content__right, .made {
   display: flex;
 }
 
@@ -793,66 +793,39 @@ header, .boxes, .up-content__arrows, .awesome-clients__slider, .email, .content,
   justify-content: space-between;
 }
 
-.box-tour {
+.container-list {
   margin: 0 auto;
-  font-size: 20px;
-  width: 300px;
-  background-color: #FFFFFF;
-}
-.box-tour__img {
-  height: 200px;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: flex-end;
-  background-color: #433A8B;
-}
-.box-tour__info {
-  background-color: #FFFFFF;
-  padding: 20px;
-}
-.box-tour__info__title {
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 10px;
-  font-size: calc( 0 * 100vw + 19px );
-}
-.box-tour__info__desc {
-  font-weight: 500;
-  color: #999999;
-  margin-bottom: 10px;
-  font-size: calc( 0 * 100vw + 14px );
-}
-.box-tour__info__place {
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #000000;
-  font-size: calc( 0 * 100vw + 14.6153846154px );
-}
-.box-tour__info__seats {
-  font-weight: 600;
-  color: #000000;
-  margin-bottom: 10px;
-  font-size: calc( 0 * 100vw + 14.6153846154px );
-}
-.box-tour__info__price {
-  font-weight: 600;
-  color: #000000;
-  font-size: calc( 0 * 100vw + 14.6153846154px );
+  width: 60vw;
 }
 
-.bold {
-  padding-button: 5px;
-  font-weight: 700;
-  color: #433A8B;
-  font-size: calc( 0 * 100vw + 14.6153846154px );
+.tour-item {
+  border: 1px solid #999999;
+  min-height: 70px;
+  background-color: #FFFFFF;
+}
+.tour-item__item {
+  padding: 15px;
+  flex-direction: column;
+}
+.tour-item__item__category {
+  width: 15%;
+}
+.tour-item__item__country {
+  width: 15%;
+}
+.tour-item__item__desc {
+  width: 40%;
+}
+.tour-item__item__price {
+  width: 15%;
+}
+.tour-item__item__date {
+  width: 15%;
 }
 
-.delete {
-  font-weight: 500;
-  color: #FFFFFF;
-  cursor: pointer;
-  margin: 20px;
-  font-size: calc( 0 * 100vw + 19px );
+.item-name {
+  font-weight: 700;
+  color: #000000;
 }
 
 *, *:after, *:before {
