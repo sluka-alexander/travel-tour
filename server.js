@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const mongodb = require('mongodb');
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
+const ObjectId = require('mongoose').Types.ObjectId;
 
 const app = express();
 const PORT = 5000;
@@ -30,8 +30,17 @@ app.get('/tours', (req, res) => {
     })
 });
 
-app.post('/tours', (req, res) => {
+app.get('/tours/:id', (req, res) => {
+    db.collection('tours').findOne({ _id: ObjectId(req.params.id) }, (err,docs)=>{
+        if(err){
+          console.log(err);
+            return res.sendStatus(500);
+        }
+       res.send(docs);
+    })
+});
 
+app.post('/tours', (req, res) => {
     let tour = new Tour({
         name: req.body.name,
         price: req.body.price,
@@ -49,18 +58,24 @@ app.post('/tours', (req, res) => {
 });
 
 app.put('/tours/:id', (req, res) => {
-    let tour = tours.find((tour)=>{
-        return tour.id === Number(req.params.id);
-    });
-    tour.name = req.body.name;
-    res.send(tour);
+    db.collection('tours').updateOne({ _id: ObjectId(req.params.id) }, { $set: { name: req.body.name } },
+        { upsert: true }, (err,docs)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.sendStatus(200);
+    })
 });
 
 app.delete('/tours/:id', (req, res) => {
-    tours = tours.filter((tour)=>{
-        return tour.id !== Number(req.params.id);
-    });
-    res.sendStatus(200);
+    db.collection('tours').deleteOne({ _id: ObjectId(req.params.id) }, (err, result)=>{
+            if(err){
+                console.log(err);
+                return res.sendStatus(500);
+            }
+            res.sendStatus(200);
+        })
 });
 
 mongoose.connect('mongodb+srv://slukasane:sluka12345678@test-cluster-bfg9t.mongodb.net/test?retryWrites=true&w=majority', {
