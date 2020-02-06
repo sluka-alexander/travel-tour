@@ -1,22 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose');
 const ObjectId = require('mongoose').Types.ObjectId;
+
+const Tour = require('./models/Tour');
+const User = require('./models/User');
+const key = require('./keys/key');
 
 const app = express();
 const PORT = 5000;
 
 let tours = [];
 let db;
-
-const tourSchema = new Schema({
-    name: String,
-    category: String,
-    price: Number,
-});
-
-const Tour = mongoose.model("tour", tourSchema);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -29,6 +24,17 @@ app.get('/tours', (req, res) => {
         res.send(docs);
     })
 });
+
+app.get('/users', (req, res) => {
+    db.collection('users').find().toArray((err,docs)=>{
+        if(err){
+          console.log(err);
+        }
+        res.send(docs);
+    })
+});
+
+
 
 app.get('/tours/:id', (req, res) => {
     db.collection('tours').findOne({ _id: ObjectId(req.params.id) }, (err,docs)=>{
@@ -78,7 +84,7 @@ app.delete('/tours/:id', (req, res) => {
         })
 });
 
-mongoose.connect('mongodb+srv://slukasane:sluka12345678@test-cluster-bfg9t.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(key, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, (err, database)=>{
