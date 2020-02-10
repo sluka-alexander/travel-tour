@@ -26,6 +26,11 @@ html {
   font-family: 'Montserrat', sans-serif;
   background-color: $background;
 }
+
+a::selection {
+  background-color: $purple;
+}
+
 a{
   text-decoration: none;
   color: black;

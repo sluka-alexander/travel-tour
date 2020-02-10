@@ -34,7 +34,17 @@
       padding: 20px;
       margin-bottom: 10px;
       font-size: calcFluidFontSize($font-M, $font-M, 320, 1920);
+      border: 1px solid $gray;
+
+      &:valid:not(:placeholder-shown) {
+        border-color: green;
+      }
+
+      &:invalid:not(:placeholder-shown) {
+        border-color: red;
+      }
     }
+
   }
   &__button{
     @include color-and-weight($white, $bold);
@@ -45,6 +55,7 @@
     background-color: $purple;
     cursor: pointer;
     transition: .3s;
+    outline: 0;
 
     &:hover{
       background-color: $pink;

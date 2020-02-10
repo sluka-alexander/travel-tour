@@ -819,6 +819,13 @@ header, .boxes, .up-content__arrows, .awesome-clients__slider, .email, .content,
   padding: 20px;
   margin-bottom: 10px;
   font-size: calc( 0 * 100vw + 19px );
+  border: 1px solid #999999;
+}
+.lr-block__inputs__input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+.lr-block__inputs__input:invalid:not(:placeholder-shown) {
+  border-color: red;
 }
 .lr-block__button {
   font-weight: 700;
@@ -829,6 +836,7 @@ header, .boxes, .up-content__arrows, .awesome-clients__slider, .email, .content,
   background-color: #433A8B;
   cursor: pointer;
   transition: 0.3s;
+  outline: 0;
 }
 .lr-block__button:hover {
   background-color: #FE6091;
@@ -891,6 +899,10 @@ header, .boxes, .up-content__arrows, .awesome-clients__slider, .email, .content,
 html {
   font-family: "Montserrat", sans-serif;
   background-color: #F6F6F6;
+}
+
+a::selection {
+  background-color: #433A8B;
 }
 
 a {
