@@ -2,17 +2,26 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const ObjectId = require('mongoose').Types.ObjectId;
+const expressLayouts = require('express-ejs-layouts');
+
+const app = express();
+const PORT = process.env.PORT || 5000;
 
 const Tour = require('./models/Tour');
 const key = require('./keys/key');
-
-const app = express();
-const PORT = 5000;
-
 let db;
+//EJS
+app.use(expressLayouts);
+app.set('view engine', 'ejs');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use( express.static(__dirname + '/views'));
+
+app.use('/', require('./routes/index'));
+
 
 //---------ВЫВОД ВСЕГО СПИСКА ТУРОВ
 

@@ -1,0 +1,134 @@
+@import "common/mixins";
+@import "common/placeholders";
+@import "common/variables";
+@import "common/functions";
+@import "common/config";
+
+@import "blocks/starting-section";
+@import "blocks/experience";
+@import "blocks/category";
+@import "blocks/trip";
+@import "blocks/clients";
+@import "blocks/feedback";
+@import "blocks/footer";
+@import "blocks/login";
+
+@import "blocks/tours";
+
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $background;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+input {
+  border: none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  transition: .3s;
+  margin: 0 auto;
+  max-width: 300px;
+  min-width: 300px;
+  text-align: center;
+
+  @include media(mobile) {
+    max-width: 360px;
+    text-align: start;
+
+  }
+  @include media(small-tablet) {
+    max-width: 560px;
+
+  }
+  @include media(tablet) {
+    max-width: 700px;
+  }
+
+  @include media(desktop) {
+    max-width: 960px;
+  }
+  @include media(large-desktop) {
+    max-width: 1170px;
+  }
+;
+}
+
+.title {
+  @include color-and-weight($purple, $extra-bold);
+
+  font-size: calcFluidFontSize(25, $font-XL, 320, 1920);
+  margin: 30px 0;
+}
+
+.subtitle {
+  @include color-and-weight($gray, $regular);
+
+  text-align: center;
+  font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
+  margin-bottom: 30px;
+  max-width: 600px;
+
+  @include media(mobile) {
+    text-align: start;
+  }
+}
+
+.main-img {
+  @include size(44vw,1080px);
+
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+  z-index: -1;
+
+  @include media(large-desktop) {
+    background-image: url("https://i.ibb.co/zby7Kps/main.jpg");
+  }
+}
+
+
+.circle {
+  @include size(100%,453px);
+
+  z-index: -3;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  @include media(large-desktop) {
+    background-image: url('#{$img}circle.png');
+  }
+}
+
+.line-back {
+  @include size(100%,957px);
+
+  z-index: -7;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include media(large-desktop) {
+    background-image: url('#{$img}line-back.png');
+  }
+}

@@ -1,0 +1,53 @@
+@import "../common/mixins";
+@import "../common/placeholders";
+@import "../common/variables";
+@import "../common/functions";
+@import "../common/config";
+
+.lr-block{
+  @extend %flex;
+
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 25vw;
+  padding: 20px;
+  box-shadow: 0px 0px 39px 13px rgba(232,232,232,1);
+  z-index: 6;
+  background-color: $background;
+
+  &__title{
+    @include color-and-weight($black, $bold);
+
+    font-size: calcFluidFontSize($font-L, $font-L, 320, 1920);
+    margin: 10px 0;
+  }
+  &__inputs{
+    @extend %flex;
+
+    flex-direction: column;
+    width: 100%;
+
+    &__input{
+      @include color-and-weight($black, $regular);
+
+      padding: 20px;
+      margin-bottom: 10px;
+      font-size: calcFluidFontSize($font-M, $font-M, 320, 1920);
+    }
+  }
+  &__button{
+    @include color-and-weight($white, $bold);
+
+    font-size: calcFluidFontSize($font-M, $font-M, 320, 1920);
+    padding: 20px 40px;
+    border: none;
+    background-color: $purple;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover{
+      background-color: $pink;
+    }
+  }
+}
