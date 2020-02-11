@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use( express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/views'));
 
 app.use('/', require('./routes/index'));
 
@@ -26,9 +26,9 @@ app.use('/', require('./routes/index'));
 //---------ВЫВОД ВСЕГО СПИСКА ТУРОВ
 
 app.get('/tours', (req, res) => {
-    db.collection('tours').find().toArray((err,docs)=>{
-        if(err){
-          console.log(err);
+    db.collection('tours').find().toArray((err, docs) => {
+        if (err) {
+            console.log(err);
         }
         res.send(docs);
     })
@@ -36,12 +36,12 @@ app.get('/tours', (req, res) => {
 //---------ВЫВОД ТУРА ПО ID
 
 app.get('/tours/:id', (req, res) => {
-    db.collection('tours').findOne({ _id: ObjectId(req.params.id) }, (err,docs)=>{
-        if(err){
-          console.log(err);
+    db.collection('tours').findOne({_id: ObjectId(req.params.id)}, (err, docs) => {
+        if (err) {
+            console.log(err);
             return res.sendStatus(500);
         }
-       res.send(docs);
+        res.send(docs);
     })
 });
 
@@ -54,12 +54,12 @@ app.post('/tours', (req, res) => {
         price: req.body.price,
     });
     tour.save()
-        .then(function(doc){
+        .then(function (doc) {
             console.log("Сохранен объект", doc);
             res.sendStatus(200);
             mongoose.disconnect();
         })
-        .catch(function (err){
+        .catch(function (err) {
             console.log(err);
             mongoose.disconnect();
         });
@@ -68,22 +68,10 @@ app.post('/tours', (req, res) => {
 //---------РЕДАКТИРОВАНИЕ ТУРА ПО ID
 
 app.put('/tours/:id', (req, res) => {
-    db.collection('tours').updateOne({ _id: ObjectId(req.params.id) },
-        { $set: { name: req.body.name, category: req.body.category, price: Number(req.body.price)} },
-        (err,docs)=>{
-        if(err){
-            console.log(err);
-            return res.sendStatus(500);
-        }
-        res.sendStatus(200);
-    })
-});
-
-//---------УДАЛЕНИЕ ТУРА ПО ID
-
-app.delete('/tours/:id', (req, res) => {
-    db.collection('tours').deleteOne({ _id: ObjectId(req.params.id) }, (err, result)=>{
-            if(err){
+    db.collection('tours').updateOne({_id: ObjectId(req.params.id)},
+        {$set: {name: req.body.name, category: req.body.category, price: Number(req.body.price)}},
+        (err, docs) => {
+            if (err) {
                 console.log(err);
                 return res.sendStatus(500);
             }
@@ -91,13 +79,25 @@ app.delete('/tours/:id', (req, res) => {
         })
 });
 
+//---------УДАЛЕНИЕ ТУРА ПО ID
+
+app.delete('/tours/:id', (req, res) => {
+    db.collection('tours').deleteOne({_id: ObjectId(req.params.id)}, (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.sendStatus(200);
+    })
+});
+
 //---------ПОДКЛЮЧЕНИЕ MONGODB
 
 mongoose.connect(key, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}, (err, database)=>{
-    if(err){
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+}, (err, database) => {
+    if (err) {
         console.log(err);
     }
     db = database;

@@ -61,4 +61,26 @@
       background-color: $pink;
     }
   }
+  &__error{
+    @extend %flex-center;
+
+    @include color-and-weight($white, $regular);
+
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: $red;
+    padding: 10px;
+    font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
+  }
+  &__success{
+    @extend %flex-center;
+
+    @include color-and-weight($white, $regular);
+
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #00cf00;
+    padding: 10px;
+    font-size: calcFluidFontSize($font-S, $font-S, 320, 1920);
+  }
 }

@@ -3,12 +3,13 @@
     <div class="lr-block__title">
         Sigh up
     </div>
+    <%- include('partials/messeges'); %>
     <div class="lr-block__inputs">
         <input type="text" name="name" class="lr-block__inputs__input" placeholder="Enter Name" id="name"
                minlength="4" maxlength="16" >
         <input type="email" name="email" class="lr-block__inputs__input" placeholder="Enter Email" id="email">
         <input type="password" name="password" class="lr-block__inputs__input" placeholder="Enter Password" id="password"
-               minlength="7" maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+               maxlength="16" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
     </div>
     <button type="submit" class="lr-block__button" id="btn">Register</button>
 </div>

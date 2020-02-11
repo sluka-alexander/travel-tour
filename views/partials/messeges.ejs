@@ -1,0 +1,5 @@
+<% if(typeof errors != 'undefined'){ %> <% errors.forEach(function(error) { %>
+    <div class="lr-block__error">
+        <%= error.msg %>
+    </div>
+<% }); %> <% } %>
